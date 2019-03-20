@@ -1,0 +1,67 @@
+.chargement{
+    background: #101214;
+    position: absolute;
+    z-index: 1;
+    height: 100%;
+    width: 100%;
+}
+.test{
+    animation: tourbilol 0.8s ease-out 0s 1;
+}
+@keyframes tourbilol{
+    0%{
+    transform: rotate(180deg);
+    }
+}
+.title{
+    margin: 2%;
+    font-size: 1.7em;
+}
+.back{
+    background-image: url(../../assets/image/accueil.jpeg);
+    background-repeat: none;
+    background-size: cover;
+}
+.header{
+    padding: 2%;
+    color: rgb(37, 199, 211);
+    height: 100%;
+}
+.chargheader{
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 100%;
+    width: 100%;
+}
+.head{
+    padding: 5%;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    flex-direction: column;
+}
+.jeux{
+    background: rgba(0, 81, 87, 0.651);
+    border-radius: 20px 0 20px 0;
+    border: 2px solid rgb(37, 199, 211);
+    text-align: center;
+    padding: 2%;
+    margin: 2%;
+    font-size: 2em;
+    font-weight: bold;
+    width: 45%;
+    transition: 0.5s;
+}
+.jeux:hover{
+    background: rgba(116, 68, 23, 0.582);
+    border: 2px solid rgb(211, 121, 37);
+    color: rgb(211, 121, 37);
+    width: 60%;
+    transition: 0.5s;
+}
+li{
+    list-style: none;
+}

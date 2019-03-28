@@ -1,0 +1,26 @@
+.header{
+    position: absolute;
+    top: 5%;
+    left: 10%;
+    min-height: 100px;
+    width: 80%;
+    z-index: 100;
+    background: rgba(0, 81, 87, 0.85);
+    border-radius: 20px 100px 100px 20px;
+    border: 2px solid rgb(37, 199, 211);
+}
+.block{
+    width: 100%;
+    margin: 2%;
+    
+}
+.texte{
+    width: 95%;
+    position: relative;
+    right: 0;
+    color: rgb(37, 199, 211);
+}
+.vignette{
+    font-size: 1.5em;
+    color: rgb(37, 199, 211);
+}

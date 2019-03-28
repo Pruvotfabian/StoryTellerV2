@@ -1,0 +1,44 @@
+
+<app-chargement *ngIf="chargement"></app-chargement>
+<app-header *ngIf="fin2"></app-header>
+
+
+<div class = "back" >
+  <!-- button next -->
+  <button *ngIf="buttone" (click)="dialnext()" class="buttone">Next</button>
+
+
+  <div class="block">
+    <img class="img left" src="../../../assets/image/prologue/prologue1.jpeg" alt="" *ngIf="debut">
+    <audio autoplay src="../../../assets/Sound/walk.mp3" *ngIf="debut"></audio>
+
+    <img class="img right" src="../../../assets/image/prologue/prologue2.jpeg" alt="" *ngIf="milieu">
+    <audio autoplay src="../../../assets/Sound/dooropen.mp3" *ngIf="milieu"></audio>
+   
+    <img class="img right z-1" src="../../../assets/image/prologue/prologue3.jpeg" alt="" *ngIf="fin">
+
+        
+    <img class="img2 z-1" src="../../../assets/image/prologue/prologue4.jpeg" alt="" *ngIf="fin2">
+    <img class="img3 z-1" src="../../../assets/image/aurelia.png" alt="" (click)="dial()" *ngIf="fin2a">
+    <img class="img3 z-1" src="../../../assets/image/aurelia.png" alt=""  *ngIf="fin3">
+
+
+    <!-- rubrique choix dialogue -->
+    <div class="choix" *ngIf="choix">
+      <button class="btntop btnN btn" (click)="choix1et2()">Oui ? ...</button>
+      <button class="btnleft btnL btn" (click)="choixL()">Ravie de vous rencontrer.</button>
+      <button class="btnright btnO btn" (click)="choixO()">J'ai pas le temps</button>
+      <button class="btnbottom btnN btn" (click)="choix1et2()">Vous êtes ?</button>
+    </div>
+    <div class="choix" *ngIf="choix2">
+      <button class="btntop btnN btn" (click)="choixinfo1()">Pourquoi avoir rejoint la rebellion ?</button>
+      <button class="btnleft btnN btn" (click)="choixinfo2()">Comment avez vous connu le Capitaine ?</button>
+      <button class="btnright btnN btn" (click)="choixinfo3()" >Quels sont vos fonction ?</button>
+      <button class="btnbottom btnN btn" (click)="choixrevoir()">Le capitaine m'attend on reparleras plus tard.</button>
+    </div>
+    <div class="trophee" *ngIf="tS.premierD"><h3>PremierDialogue
+
+    </h3></div>
+  </div>
+
+</div>

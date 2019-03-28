@@ -1,27 +1,77 @@
-<div class="chargement" *ngIf="chargement">
+<div class="chargement" *ngIf="chargement" >
     <div class="chargheader">
-  <img class="test" src="../../assets/image/Logo.png" alt="">  
-  <h2 class="title">Pruvot Studio présente</h2>
+      <img class="test" src="../../assets/image/Logo.png" alt="">
+      <audio autoplay src="../../assets/Sound/thx.mp3"></audio>  
+      <h2 class="title">PStudio présente</h2>
     </div>
+</div>
+<div class="chargement2" *ngIf="chargement2">
+</div>
 
+<div *ngIf="chargement3">
+    <audio autoplay loop src="../../assets/Sound/starwars.mp3"> </audio> 
+</div>
+
+<div class="back" *ngIf="menu"> 
+
+  <div class="header">
+      <ul class="head">
+        <li class="jeux" (click)="campagne()">
+          <div>Campagne</div>
+        </li>
+        <li class="jeux" (click)="succes()">
+            <div>Succés</div>
+          </li>
+        <li class="jeux" (click)="info()">
+            <div>Informations</div>
+          </li>
+      </ul> 
+
+  </div>
 </div>
 
 
-<div class="back">
-  <div class="header">
-      <ul class="head">
-        <li class="jeux">
-          <div>Nouvelle partie</div>
-        </li>
-        <li class="jeux">
-          <div>Options</div>
-        </li>
-        <li class="jeux">
-            <div>Succés</div>
-          </li>
-        <li class="jeux">
-            <div>Informations</div>
-          </li>
-      </ul>    
+<div class="back" *ngIf="menuCampagne"> 
+    <app-connexion *ngIf="connect"></app-connexion>
+  <div class="header2" >
+      <div class="head2">
+        <div class="jeux2">
+         <p>Avant de commencer il faut vérifier quelque petite chose...</p> 
+         <p>Premièrement, entendez vous la musique en fond sonore ? </p>
+         <p>Si oui, alors tout va bien et je vous conseille de mettre un casque ou des écouteurs pour profiter pleinement des effets sonores.</p>
+         <p>Sinon, alors je vous invite a relancé le jeux via ce bouton.</p>
+         <button class="btn" (click)="reload()">Redémarage</button>
+         <p>Deuxièmement, pour des raisons de praticité il est vivement conseillé de jouer sur PC</p>
+         <p>Troisièmement, il est très vivement déconseiller de rafraîchir la page de votre navigateur pour des raisons de problèmes sonores et scénaristiques.</p>
+         <button class="btn" (click)="start()">Commencer l'aventure</button>
+         <button class="btn" (click)="return()">Retour au menu</button>
+        </div>
+      </div> 
+  </div>
+</div>
+
+<div class="back" *ngIf="menuSucces"> 
+  <div class="header2" >
+      <div class="head2">
+        <div class="jeux2">
+        <h2>Succes</h2> 
+         <p>Vous trouverez ici les succès. Finissez le jeux et vous découvrirez certains succès (Plus ou moins spécial). Attention ! Certain succès sont très difficiles à obtenir. </p>
+         <button class="btn" (click)="return()">Retour au menu</button>
+        </div>
+      </div> 
+  </div>
+</div>
+<div class="back" *ngIf="menuInfo"> 
+  <div class="header2" >
+      <div class="head2">
+        <div class="jeux2">
+        <h2>Informations</h2> 
+         <p>Ce jeux contient des bandes sonores, je vous conseille de mettre un casque ou des écouteurs pour profiter pleinement des effets sonores.</p>
+         <p>Pour des raisons de praticité il est vivement conseillé de jouer sur PC</p>
+         <p>Il est très vivement déconseiller de rafraîchir la page de votre navigateur pour des raisons de problèmes sonores et scénaristiques.</p>
+         <p>Le jeux a été développé par PruvotStudio</p>
+         <button class="btn" (click)="return()">Retour au menu</button>
+        </div>
+      </div> 
   </div>
 </div>

@@ -1,42 +1,105 @@
 
 <app-chargement *ngIf="chargement"></app-chargement>
-<app-header *ngIf="fin2"></app-header>
+<app-header ></app-header>
 
 
 <div class = "back" >
   <!-- button next -->
-  <button *ngIf="buttone" (click)="dialnext()" class="buttone">Next</button>
-
+  <button (click)="dAureliaS.dialnext()" class="buttone next">Next</button>
+  <button (click)="d20100S.dialnext()" class="buttone next2">Next</button>
+  <button (click)="denocbesS.dialnext()" class="buttone next3">Next</button>
 
   <div class="block">
-    <img class="img left" src="../../../assets/image/prologue/prologue1.jpeg" alt="" *ngIf="debut">
-    <audio autoplay src="../../../assets/Sound/walk.mp3" *ngIf="debut"></audio>
-
-    <img class="img right" src="../../../assets/image/prologue/prologue2.jpeg" alt="" *ngIf="milieu">
-    <audio autoplay src="../../../assets/Sound/dooropen.mp3" *ngIf="milieu"></audio>
-   
-    <img class="img right z-1" src="../../../assets/image/prologue/prologue3.jpeg" alt="" *ngIf="fin">
-
-        
-    <img class="img2 z-1" src="../../../assets/image/prologue/prologue4.jpeg" alt="" *ngIf="fin2">
-    <img class="img3 z-1" src="../../../assets/image/aurelia.png" alt="" (click)="dial()" *ngIf="fin2a">
-    <img class="img3 z-1" src="../../../assets/image/aurelia.png" alt=""  *ngIf="fin3">
+    <img class="img1 img left" src="../../../assets/image/prologue/Prologueimg1.jpeg" alt="" >
+    <audio autoplay src="../../../assets/Sound/walk.mp3" *ngIf="walk"></audio>
+    <img class="img2 img left" src="../../../assets/image/prologue/Prologueimg1b.jpeg" alt="">
+    <audio autoplay src="../../../assets/Sound/dooropen.mp3" *ngIf="door"></audio>
+    <img class="img3 img right" src="../../../assets/image/prologue/Prologueimg2.jpeg" alt="" >
+    <img class="img4 img right" src="../../../assets/image/prologue/Prologueimg2b.jpeg" alt="" >
+    <img class="img5 imgcenter left" src="../../../assets/image/prologue/Prologueimg3.jpeg" >
 
 
-    <!-- rubrique choix dialogue -->
-    <div class="choix" *ngIf="choix">
-      <button class="btntop btnN btn" (click)="choix1et2()">Oui ? ...</button>
-      <button class="btnleft btnL btn" (click)="choixL()">Ravie de vous rencontrer.</button>
-      <button class="btnright btnO btn" (click)="choixO()">J'ai pas le temps</button>
-      <button class="btnbottom btnN btn" (click)="choix1et2()">Vous êtes ?</button>
+
+    <img class="img6 img left" src="../../../assets/image/prologue/Prologueimg4.jpeg">
+    <img class="img7 img right" src="../../../assets/image/prologue/Prologueimg5.jpeg">
+    <img class="img8 img right" src="../../../assets/image/prologue/Prologueimg6.jpeg">
+    <img class="img9 img  left" src="../../../assets/image/prologue/Prologueimg6b.jpeg">
+    <img class="img10 imgcenter right" src="../../../assets/image/prologue/Prologueimg7.jpeg">
+
+   <!-- dial Aurelia R5-D4 plus transition -->
+    <div class="click" (click)="dAureliaS.dial()"></div>
+    <div class="click2" (click)="dial2()"></div>
+
+    <div class="click3" (click)="d20100S.dial()"></div>
+    <div class="click4" (click)="denocbesS.dial()"></div>
+    <div class="click5" (click)="dnaibafS.dial()"></div>
+
+    <div class="transition transition2 transition3 transition4 transition5 background"></div>
+    <img class="transition imagetrans" src="../../../assets/image/aurelia.png">
+    <img class="transition2 imagetrans" src="../../../assets/image/R5-D4.png">
+    <img class="transition3 imagetrans" src="../../../assets/image/20-100.png">
+    <img class="transition4 imagetrans" src="../../../assets/image/R5-D4.png">
+    <img class="transition5 imagetrans" src="../../../assets/image/20-100.png">
+
+    <!-- rubrique choix gros équipe nai baf enorc bes et 20-100 -->
+    <!-- 100-20 -->
+    <div class="choix" *ngIf="d20100S.choix3">
+      <button class="btntop btnN btn" (click)="d20100S.choixneutre()">Un séparatiste ?</button>
+      <button class="btnleft btnL btn" (click)="d20100S.choixL()">Bien le bonjour 20-100</button>
+      <button class="btnright btnO btn" (click)="d20100S.choixO()">Je deteste les séparatistes !</button>
+      <button class="btnbottom btnN btn" (click)="d20100S.choixneutre()">Qu'est ce que ?</button>
     </div>
+    <div class="choix" *ngIf="d20100S.choix3b">
+      <button class="btntop btnN btn" (click)="d20100S.choixinfo1()">Pourquoi 20-100 ?</button>
+      <button class="btnleft btnN btn" (click)="d20100S.choixinfo2()">Votre langague ?</button>
+      <button class="btnright btnN btn" (click)="d20100S.choixinfo3()" >Quels sont vos fonction ?</button>
+      <button class="btnbottom btnN btn" (click)="d20100S.choixrevoir()">On reparleras plus tard.</button>
+    </div>
+
+    <!-- Nai Baf -->
+    <div class="choix" *ngIf="dnaibafS.choix4">
+      <button class="btntop btnN btn" (click)="dnaibafS.choixneutre()">Je ...</button>
+      <button class="btnleft btnL btn" (click)="dnaibafS.choixL()">Je ne vous veux aucun mal...</button>
+      <button class="btnright btnO btn" (click)="dnaibafS.choixO()">[Pousser]</button>
+      <button class="btnbottom btnN btn" (click)="dnaibafS.choixneutre()">Mais ...</button>
+    </div>
+
+    <!-- enorc bes -->
+    <div class="choix" *ngIf="denocbesS.choix5">
+      <button class="btntop btnN btn" (click)="denocbesS.choixneutre()">Bonjour...</button>
+      <button class="btnleft btnL btn" (click)="denocbesS.choixL()">[SALUER]</button>
+      <button class="btnright btnO btn" (click)="denocbesS.choixO()">J'ai pas le temps !</button>
+      <button class="btnbottom btnN btn" (click)="denocbesS.choixneutre()">Bonjour...</button>
+    </div>
+    <div class="choix" *ngIf="denocbesS.choix5b">
+      <button class="btntop btnN btn" (click)="denocbesS.choixinfo1()">Comment avez vous rejoint la rébellion?</button>
+      <button class="btnleft btnN btn" (click)="denocbesS.choixinfo2()">Comment avez vous connu le Capitaine ?</button>
+      <button class="btnright btnN btn" (click)="denocbesS.choixinfo3()" >Quels sont vos fonction ?</button>
+      <button class="btnbottom btnN btn" (click)="denocbesS.choixrevoir()">On reparleras plus tard le capitaine m'attend</button>
+    </div>
+
+    <!-- rubrique choix dialogue AURELIA R5-D4-->
+    <div class="choix" *ngIf="dAureliaS.choix">
+      <button class="btntop btnN btn" (click)="dAureliaS.choix1et2()">Oui ? ...</button>
+      <button class="btnleft btnL btn" (click)="dAureliaS.choixL()">Ravie de vous rencontrer.</button>
+      <button class="btnright btnO btn" (click)="dAureliaS.choixO()" (click)="continued()">J'ai pas le temps</button>
+      <button class="btnbottom btnN btn" (click)="dAureliaS.choix1et2()">Vous êtes ?</button>
+    </div>
+    <div class="choix" *ngIf="dAureliaS.choixb">
+      <button class="btntop btnN btn" (click)="dAureliaS.choixinfo1()">Pourquoi avoir rejoint la rebellion ?</button>
+      <button class="btnleft btnN btn" (click)="dAureliaS.choixinfo2()">Comment avez vous connu le Capitaine ?</button>
+      <button class="btnright btnN btn" (click)="dAureliaS.choixinfo3()" >Quels sont vos fonction ?</button>
+      <button class="btnbottom btnN btn" (click)="dAureliaS.choixrevoir()" (click)="continued()">Le capitaine m'attend on reparleras plus tard.</button>
+    </div>
+
+    <!-- R4-D5 -->
     <div class="choix" *ngIf="choix2">
-      <button class="btntop btnN btn" (click)="choixinfo1()">Pourquoi avoir rejoint la rebellion ?</button>
-      <button class="btnleft btnN btn" (click)="choixinfo2()">Comment avez vous connu le Capitaine ?</button>
-      <button class="btnright btnN btn" (click)="choixinfo3()" >Quels sont vos fonction ?</button>
-      <button class="btnbottom btnN btn" (click)="choixrevoir()">Le capitaine m'attend on reparleras plus tard.</button>
+      <button class="btntop btnN btn" (click)="choixeuh()">Euh...</button>
+      <button class="btnleft btnN btn" (click)="choixeuh()">Euh...</button>
+      <button class="btnright btnN btn" (click)="choixeuh()" >Euh...</button>
+      <button class="btnbottom btnN btn" (click)="choixeuh()">Euh...</button>
     </div>
-    <div class="trophee" *ngIf="tS.premierD"><h3>PremierDialogue
+    <div class="trophee" *ngIf="tS.linuxInside"><h3>Linux Inside
 
     </h3></div>
   </div>

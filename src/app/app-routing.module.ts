@@ -6,14 +6,14 @@ import { JeuxPrologueComponent } from './Jeux/jeux-prologue/jeux-prologue.compon
 import { JeuxEpilogueComponent } from './Jeux/jeux-epilogue/jeux-epilogue.component';
 import { GameguardianService } from './service/gameguardian.service';
 import { GeneriqueComponent } from './Jeux/generique/generique.component';
-import { ChoixComponent } from './choix/choix.component';
+import { SurchauffeComponent } from './surchauffe/surchauffe.component';
 
 const routes: Routes = [
   { path: '',  redirectTo: 'home', pathMatch: 'full' },
   { path: 'home', component: AccueilComponent},
   { path: 'prologue', component: JeuxPrologueComponent},
   { path: 'generique', component: GeneriqueComponent},
-  { path: 'choix', component: ChoixComponent },
+  { path: 'choix', component: SurchauffeComponent },
   { path: 'epilogue', component: JeuxEpilogueComponent, canActivate: [GameguardianService]},
   { path: '**', component: Page404Component},
 ];

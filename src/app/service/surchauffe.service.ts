@@ -11,13 +11,14 @@ export class SurchauffeService {
   mediumc: boolean = false;
   mediumplus: boolean = false;
   warningc: boolean = false;
+  alertS: boolean = false;
   refroidissement: number = 0;
+  
   constructor() { 
     
   }
   shootf(){
     if (this.verifyshoot == 1) {
-      console.log('tests')
       this.shoot++;
       this.refroidissement++;
     }
@@ -70,15 +71,15 @@ export class SurchauffeService {
         
       }
       if (this.refroidissement > 5){
-        console.log('testf')
         this.verifyshoot = 2;
+        this.alertS = true;
         setTimeout(() =>{
-          console.log('testf2')
           this.verylow = false;
           this.lowc = false;
           this.mediumc = false;
           this.mediumplus = false;
           this.warningc = false;
+          this.alertS = false;
           this.verifyshoot = 1;
           this.shoot = 0;
           this.refroidissement = 0;

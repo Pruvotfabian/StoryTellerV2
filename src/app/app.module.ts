@@ -20,6 +20,8 @@ import { GeneriqueComponent } from './Jeux/generique/generique.component';
 import { HeaderComponent } from './header/header.component';
 import { ChoixComponent } from './choix/choix.component';
 import { ChargementComponent } from './chargement/chargement.component';
+import { SurchauffeComponent } from './surchauffe/surchauffe.component';
+import { HealbarComponent } from './healbar/healbar.component';
 
 @NgModule({
   declarations: [
@@ -32,7 +34,9 @@ import { ChargementComponent } from './chargement/chargement.component';
     GeneriqueComponent,
     HeaderComponent,
     ChoixComponent,
-    ChargementComponent
+    ChargementComponent,
+    SurchauffeComponent,
+    HealbarComponent
   ],
   imports: [
     BrowserModule,

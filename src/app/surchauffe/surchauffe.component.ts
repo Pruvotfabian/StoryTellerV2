@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { SurchauffeService } from '../service/surchauffe.service';
 import { EnemisService } from '../service/enemis.service';
 import { HealhbarService } from '../service/healhbar.service';
+import { DOCUMENT } from '@angular/common';
 
 @Component({
   selector: 'app-surchauffe',
@@ -10,12 +11,18 @@ import { HealhbarService } from '../service/healhbar.service';
 })
 export class SurchauffeComponent implements OnInit {
   combat:boolean = false;
-  constructor(public sd: SurchauffeService,public es: EnemisService, public hS: HealhbarService) { }
+  constructor(public sd: SurchauffeService,public es: EnemisService, public hS: HealhbarService) {
+ 
+   }
 
   ngOnInit() {
     setTimeout(() => {
       this.combat = true;
+      
     }, 1000);
   }
+
+
+  
 
 }

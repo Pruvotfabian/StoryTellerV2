@@ -1,16 +1,25 @@
 <!doctype html>
-<html lang="en">
+<html lang="fr">
 <head>
-  <link href="https://fonts.googleapis.com/css?family=Orbitron" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Press+Start+2P" rel="stylesheet">
   <meta charset="utf-8">
   <title>ProjetSTV2</title>
   <base href="/">
-
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="icon" type="image/x-icon" href="./assets/image/ico.png">
 </head>
 <body>
   <app-root></app-root>
 </body>
-
+<div id="cursor"></div>
+<script *ngIf="tetr" type="text/javascript">    
+  var cursor = document.getElementById('cursor');
+  document.addEventListener('mousemove', function(e) {
+  var x = e.clientX;
+  var y = e.clientY;
+  cursor.style.left = x + "px";
+  cursor.style.top = y + "px";
+});
+</script
 </html>
+

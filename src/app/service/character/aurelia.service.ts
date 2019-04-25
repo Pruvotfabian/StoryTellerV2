@@ -10,20 +10,19 @@ export class AureliaService {
   choix: boolean = false;
   choixb: boolean = false;
   dialId : number = 0;
-  fini: boolean = false;
-
+  clickarea1: boolean = false;
+  
   constructor(public dS: HeaderService) { }
 
      //debut Dial Aurelia
      dial(){
       if (this.introDialId == false) {
-        $('.transition').addClass('active');
-        this.dS.name = "??? : ";
+        $('.imgcha').addClass('active');
+        this.dS.name = "Aurelia : ";
         this.dS.test = "Bonjour, Commandant !";
         this.choix = true;
       }
       if (this.introDialId == true) {
-        $('.transition').addClass('active');
         this.dS.name = "Aurelia : ";
         this.dS.test = "Oui, Commandant ?";
         this.choixb = true;
@@ -32,7 +31,7 @@ export class AureliaService {
     // choix neutre Aurelia
   choix1et2(){
     this.dS.name = "Aurelia : ";
-    this.dS.test = "Aurelia, Lieutenant Aurelia. Le capitaine a beaucoup parlé de vous, il vous attend dans la salle de commandement.";
+    this.dS.test = "Aurelia, Lieutenant Aurelia. Le capitaine a beaucoup parlé de vous.";
     this.choix = false;
     this.choixb = true;
     this.introDialId = true
@@ -57,12 +56,12 @@ export class AureliaService {
   }
   //Revoir AUrelia
   choixrevoir(){
-    $('.transition').removeClass('active');
     this.dS.name = "Aurelia : ";
-    this.dS.test = "Au revoir commandant";
+    this.dS.test = "Au revoir commandant. Le capitaine vous attend dans le poste de commandemant.";
     this.choixb = false;
+    this.clickarea1 = true;
+    $('.imgcha').removeClass('active');
     this.introDialId = true;
-    this.fini = true;
   }
 
 
@@ -70,19 +69,19 @@ export class AureliaService {
   choixL(){
     this.introDialId = true;
     this.dS.name = "Aurelia : ";
-    this.dS.test = "Mais moi de même je suis très heureuse de vous rencontrer, on parle de vous comme d'un héros, j'ai hâte que vous nous racontiez vos aventures commandant. Mais je suis impolie, mon nom est Aurelia. Lieutenant Aurelia";
+    this.dS.test = "Mais moi de même je suis très heureuse de vous rencontrer, on parle de vous comme d'un héros, j'ai hâte que vous nous racontiez vos aventures commandant. Mais je suis impolie, mon nom est Aurelia. Caporale Aurelia";
     this.choix = false;
     this.choixb = true;
   }
 
   // choix Obscure Aurelia
   choixO(){
-    $('.transition').removeClass('active');
-    this.dS.name = "??? : ";
-    this.dS.test = "Oh ! Oui ... Je suis désolé de vous avoir dérangé commandant";
+
+    this.dS.name = "Aurelia : ";
+    this.dS.test = "Oh ! Oui ... Je suis désolé de vous avoir dérangé commandant. Le capitaine vous attend au poste de commandemant.";
     this.choix = false;
-    this.fini = true;
-    $('.click').removeClass('active');
+    this.clickarea1 = true;
+    $('.imgcha').removeClass('active');
   }
 
   dialnext(){

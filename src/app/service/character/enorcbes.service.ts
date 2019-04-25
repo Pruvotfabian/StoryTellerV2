@@ -6,8 +6,8 @@ import * as $ from 'jquery';
   providedIn: 'root'
 })
 export class EnorcbesService {
-  choix5: boolean = false;
-  choix5b: boolean = false;
+  choix: boolean = false;
+  choixb: boolean = false;
   dialId : number = 0;
   introDialId: boolean = false;
   constructor(public dS: HeaderService) { }
@@ -15,16 +15,16 @@ export class EnorcbesService {
     // Enorc Bes
     dial(){
       if (this.introDialId == false) {
-        $('.transition4').addClass('active');
-        this.dS.name = "??? : ";
+        this.dS.name = "Enorc Bes : ";
+        $('.imgcha2').addClass('active');
         this.dS.test = "[Salut Militaire] Commandant !";
-        this.choix5 = true;
+        this.choix = true;
       }
       if (this.introDialId == true) {
-        $('.transition4').addClass('active');
         this.dS.name = "Enorc Bes : ";
+        $('.imgcha2').addClass('active');
         this.dS.test = "Oui, commandant ?";
-        this.choix5b = true;
+        this.choixb = true;
       }
      
     }
@@ -32,8 +32,8 @@ export class EnorcbesService {
      choixneutre(){
       this.dS.name = "Enorc Bes : ";
       this.dS.test = "Je me présente, Lieutenant Enorc Bes du 6éme escadron de X-wing !";
-      this.choix5 = false;
-      this.choix5b = true;
+      this.choix = false;
+      this.choixb = true;
     }
     //choix info 20-100
   choixinfo1(){
@@ -45,35 +45,36 @@ export class EnorcbesService {
   }
   choixinfo2(){
     this.dS.name = "Enorc  Bes : ";
-    this.dS.test = "Depuis trés peu de temps, je ne connais quasiment rien de lui.";
+    this.dS.test = "Depuis trés peu de temps, moins d'un mois tout au plus.";
 
   }
   choixinfo3(){
     this.dS.name = "Enorc Bes : ";
-    this.dS.test = "Je suis simplement un soldat.";
+    this.dS.test = "Je suis simplement un pilote.";
   }
     //revoir Enorc Bes
     choixrevoir(){
-      $('.transition3').removeClass('active');
       this.dS.name = "Enorc Bes : ";
-      this.dS.test = "Trés heureuse de vous avoir rencontré commandant";
-      this.choix5b = false;
+      this.dS.test = "Trés heureux de vous avoir rencontré commandant";
+      this.choixb = false;
+      $('.imgcha2').removeClass('active');
       this.introDialId = true;
+
     }
       //choix lumineux Enorc Bes
   choixL(){
     this.dS.name = "Enorc Bes : ";
-    this.dS.test = "Je suis ravie de vous rencontrer Commandant";
-    this.choix5 = false;
-    this.choix5b = true;
+    this.dS.test = "Je suis ravie de vous rencontrer Commandant. Je me présente, Lieutenant Enorc Bes du 6éme escadron de X-wing !";
+    this.choix = false;
+    this.choixb = true;
 }
    //choix obscure Enorc Bes
    choixO(){
-    this.dS.name = "??? : ";
-    this.dS.test = "Bien évidemant, Commandant le capitaine n'attend pas";
-    this.choix5 = false;
+    this.dS.name = "Enorc Bes : ";
+    this.dS.test = "Bien évidement, Commandant le capitaine n'attend pas";
+    this.choix = false;
     this.introDialId = true;
-    $('.click4').removeClass('active');
+    $('.imgcha2').removeClass('active');
 }
 dialnext(){
   this.dialId++;
@@ -91,11 +92,11 @@ dialnext(){
         this.dS.test = "Je vois...";
       }
       if (this.dialId === 4) {
-        this.dS.name = "Enorc Kila : ";
+        this.dS.name = "Enorc Bes : ";
         this.dS.test = "Non, vous pouvez pas voir... vous n'êtes pas a ma place commandant... Vous pouvez pas savoir a quel point c'est compliqué pour moi, le regard des autres...";
       }
       if (this.dialId === 5) {
-        this.dS.name = "Enorc Kila : ";
+        this.dS.name = "Enorc Bes : ";
         this.dS.test = "Autre chose ?";
         $('.next3').removeClass('active');
         this.dialId = 0;

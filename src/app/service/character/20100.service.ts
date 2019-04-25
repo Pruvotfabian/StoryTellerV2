@@ -6,8 +6,8 @@ import * as $ from 'jquery';
   providedIn: 'root'
 })
 export class vingtcentService {
-  choix3: boolean = false;
-  choix3b: boolean = false;
+  choix: boolean = false;
+  choixb: boolean = false;
   dialId : number = 0;
   introDialId: boolean = false;
   constructor(public dS: HeaderService) { }
@@ -18,13 +18,13 @@ export class vingtcentService {
         $('.transition3').addClass('active');
         this.dS.name = "??? : ";
         this.dS.test = "Bonjour, Commandant ... l'unité 20-100 et prête. L'on est trés heureux de vous rencontrer... L'on espére pouvoir coopérer du mieux que nous pouvons.";
-        this.choix3 = true;
+        this.choix = true;
       }
       if (this.introDialId == true) {
         $('.transition3').addClass('active');
         this.dS.name = "20-100 : ";
         this.dS.test = "L'on peut faire autre chose ?";
-        this.choix3b = true;
+        this.choixb = true;
       }
      
     }
@@ -32,8 +32,8 @@ export class vingtcentService {
      choixneutre(){
       this.dS.name = "20-100 : ";
       this.dS.test = "Surpris... L'on ne voulez pas vous faire peur commandant... L'on est désolé...";
-      this.choix3 = false;
-      this.choix3b = true;
+      this.choix = false;
+      this.choixb = true;
     }
     //choix info 20-100
   choixinfo1(){
@@ -56,23 +56,24 @@ export class vingtcentService {
       $('.transition3').removeClass('active');
       this.dS.name = "20-100 : ";
       this.dS.test = "L'on est trés heureux de vous avoir rencontré... Commandant.";
-      this.choix3b = false;
+      this.choixb = false;
       this.introDialId = true;
+
     }
       //choix lumineux 100-20
   choixL(){
     this.dS.name = "20-100 : ";
     this.dS.test = "Nous de même Commandant !";
-    this.choix3 = false;
-    this.choix3b = true;
+    this.choix = false;
+    this.choixb = true;
 }
    //choix obscure 100-20
    choixO(){
     this.dS.name = "20-100 : ";
     this.dS.test = "Comme il vous plairas commandant... L'on ne vous dérangeras plus.";
-    this.choix3 = false;
     this.introDialId = true;
     $('.click3').removeClass('active');
+    $('.transition3').removeClass('active');
 }
 dialnext(){
   this.dialId++;
@@ -87,9 +88,5 @@ dialnext(){
         $('.next2').removeClass('active');
         this.dialId = 0;
       }
-
 }
-
-  
-
 }

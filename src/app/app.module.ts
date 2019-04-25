@@ -22,6 +22,9 @@ import { ChoixComponent } from './choix/choix.component';
 import { ChargementComponent } from './chargement/chargement.component';
 import { SurchauffeComponent } from './surchauffe/surchauffe.component';
 import { HealbarComponent } from './healbar/healbar.component';
+import { JeuxspacebattleComponent } from './Jeux/jeuxspacebattle/jeuxspacebattle.component';
+import { ChoiceComponent } from './choice/choice.component';
+import { ClickareaComponent } from './clickarea/clickarea.component';
 
 @NgModule({
   declarations: [
@@ -36,7 +39,10 @@ import { HealbarComponent } from './healbar/healbar.component';
     ChoixComponent,
     ChargementComponent,
     SurchauffeComponent,
-    HealbarComponent
+    HealbarComponent,
+    JeuxspacebattleComponent,
+    ChoiceComponent,
+    ClickareaComponent
   ],
   imports: [
     BrowserModule,

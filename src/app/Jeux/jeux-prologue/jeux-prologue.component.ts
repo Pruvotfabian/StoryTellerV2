@@ -7,6 +7,7 @@ import { vingtcentService } from 'src/app/service/character/20100.service';
 import { AureliaService } from 'src/app/service/character/aurelia.service';
 import { EnorcbesService } from 'src/app/service/character/enorcbes.service';
 import { NaibafService } from 'src/app/service/character/naibaf.service';
+import { ClickareaComponent } from 'src/app/clickarea/clickarea.component';
 
 @Component({
   selector: 'app-jeux-prologue',
@@ -14,18 +15,14 @@ import { NaibafService } from 'src/app/service/character/naibaf.service';
   styleUrls: ['./jeux-prologue.component.css']
 })
 export class JeuxPrologueComponent implements OnInit {
+  clickarea2: boolean = false;
   chargement: boolean = true;
-  walk: boolean = false;
-  door: boolean = false;
-  fin: boolean = false;
-  dialId : number = 0;
   choix2: boolean = false;
-  
   choix4: boolean = false;
   choix5: boolean = false;
   choix5b: boolean = false;
-  continuer: boolean = false;
   constructor(
+    
     public eS: EnemisService, 
     public dS: HeaderService, 
     public tS: TropheeService, 
@@ -42,77 +39,58 @@ export class JeuxPrologueComponent implements OnInit {
     //chargement  
     setTimeout(() => {
       this.chargement = false;
-    },8000)
-    //et transition Aurelia
+    },2000)
     setTimeout(() => {
-      $('.img1').addClass('active');
-      this.walk = true;
-    },9000)
+      $('.transleft').addClass('active');
+      $('.transtop').addClass('active');
+    },2000)
     setTimeout(() => {
+      this.dS.name = "Pilote : ";
+      this.dS.test = "En approche du Simplonis Commandant ! [Ouvre le canal] Ici le Tarnas, demande autorisation d'atterrir... ";
       $('.img2').addClass('active');
-    },10000)
+      $('.transleft').removeClass('active');
+      $('.transtop').removeClass('active');
+    },17000)
     setTimeout(() => {
-      this.door = true;
+      this.dS.name = "Officier de pont : ";
+      this.dS.test = "Autorisation d'atterrir accordé Tarnas, rendez-vous au hangar B !";
+      $('.img1').addClass('active');
+      $('.transright').addClass('active');
+      // this.dAureliaS.dial();
+    },25000)
+    setTimeout(() => {
+      this.dS.name = "Pilote : ";
+      this.dS.test = "Nous sommes arrivés commandant. Le Caporale Aurelia vous attend.";
       $('.img3').addClass('active');
-    },11000)
+      $('.transhangar').addClass('active');
+      $('.transright').removeClass('active');
+    },33000)
     setTimeout(() => {
+      this.dAureliaS.dial();
       $('.img4').addClass('active');
-    },12000)
-    setTimeout(() => {
-      this.dS.name = "Tuto : ";
-      this.dS.test = "Quand vous voyez un personnage clickez dessus pour parler avec lui.";
-      $('.img5').addClass('active');
-      $('.click').addClass('active');
-      $('.click2').addClass('active');
-    },13000)
-
+      $('.transhangar').removeClass('active');
+    },37000)
   }
   
   continued(){
-    console.log('test');
-    $('.click').removeClass('active');
-    $('.click2').removeClass('active');
+    this.dS.name = "";
+    this.dS.test = "";
+    this.dAureliaS.clickarea1 = false;
+    $('.img2').removeClass('active');
+    $('.img3').removeClass('active');
+    $('.img4').removeClass('active');
+    $('.img5').addClass('active');
     setTimeout(() => {
-      $('.img1').removeClass('active');
-      $('.img2').removeClass('active');
-      $('.img3').removeClass('active');
-      $('.img4').removeClass('active');
-      $('.img5').removeClass('active');
-    }, 1500);
-    setTimeout(() => {
-      this.dS.name = "";
-      this.dS.test = "";
       $('.img6').addClass('active');
-    }, 2000);
+    },3000)
     setTimeout(() => {
+      this.clickarea2 = true;
       $('.img7').addClass('active');
-    }, 4000);
-    setTimeout(() => {
-      $('.img8').addClass('active');
-    }, 6000);
-    setTimeout(() => {
-      $('.img9').addClass('active');
-    }, 7000);
-    setTimeout(() => {
-      $('.click3').addClass('active');
-      $('.click4').addClass('active');
-      $('.click5').addClass('active');
-      $('.img10').addClass('active');
-    }, 8000);
+    },5000)
   }
-  //ASTROMECH
-  dial2(){
-    $('.transition2').addClass('active');
-    this.dS.name = "R4-F8 : ";
-    this.dS.test = "Sudo make me a sandwich."
-    this.choix2 = true;
-    this.tS.linuxInside = true;
-  }
-  //CHOIX EUH
-  choixeuh(){
-    $('.transition2').removeClass('active');
-    this.choix2 = false;
-    $('.click2').removeClass('active');
-  }
+
+  
+ 
   
 }
+// Dlanod Prump

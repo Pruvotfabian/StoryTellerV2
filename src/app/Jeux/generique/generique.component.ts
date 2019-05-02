@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewChild, ElementRef } from '@angular/core';
 import { Router } from '@angular/router';
 
 @Component({
@@ -12,13 +12,16 @@ export class GeneriqueComponent implements OnInit {
 
   constructor(public route: Router) {
    }
-
+   @ViewChild('audioIntro') audioPlayerRefIntro: ElementRef;
   ngOnInit() {
+    setTimeout(() => {
+      this.audioPlayerRefIntro.nativeElement.play(); 
+    }, 1);
     setTimeout(() => {
       this.intro = false;
     },80000)
     setTimeout(() => {
-      this.route.navigate(['/prologue'])
+      this.route.navigate(['/la-chute-du-simplonis'])
     },88000)
   }
 

@@ -9,6 +9,9 @@ import { Router } from '@angular/router';
 })
 export class ConnexionComponent implements OnInit {
   generique: boolean = false;
+  start: boolean = false;
+  connect: boolean = true;
+  chargement3: boolean;
   constructor(public AccueilC: AccueilComponent, public route: Router) { }
 
   returnA(){

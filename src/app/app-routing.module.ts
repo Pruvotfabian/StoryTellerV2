@@ -11,7 +11,7 @@ import { SurchauffeComponent } from './surchauffe/surchauffe.component';
 const routes: Routes = [
   { path: '',  redirectTo: 'home', pathMatch: 'full' },
   { path: 'home', component: AccueilComponent},
-  { path: 'prologue', component: JeuxPrologueComponent},
+  { path: 'la-chute-du-simplonis', component: JeuxPrologueComponent},
   { path: 'generique', component: GeneriqueComponent},
   { path: 'choix', component: SurchauffeComponent },
   { path: 'epilogue', component: JeuxEpilogueComponent, canActivate: [GameguardianService]},
@@ -20,7 +20,7 @@ const routes: Routes = [
 
 
 @NgModule({
-  imports: [RouterModule.forRoot(routes, {onSameUrlNavigation: 'reload'})],
+  imports: [RouterModule.forRoot(routes)],
   exports: [RouterModule]
   
 })

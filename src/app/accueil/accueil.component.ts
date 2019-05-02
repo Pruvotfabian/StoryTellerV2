@@ -53,8 +53,6 @@ export class AccueilComponent implements OnInit {
     location.reload();
   }
   ngOnInit() {
-    
-
       setTimeout(() => {
         this.chargement = false;
       },16000)

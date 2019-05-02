@@ -1,35 +1,71 @@
 
+
 <app-chargement *ngIf="chargement"></app-chargement>
 <app-header></app-header>
 
 
 <div class = "back" >
-  <!-- button next -->
+  <!-- INTRO -->
   <img class="transleft" src="../../../assets/image/SIMPLONIS.png" alt="">
   <img class="transtop" src="../../../assets/image/Tarnas.png" alt="">
+  <!-- button next -->
   <button (click)="dAureliaS.dialnext()" class="buttone next">Next</button>
-  <button (click)="d20100S.dialnext()" class="buttone next2">Next</button>
+  <!-- <button (click)="d20100S.dialnext()" class="buttone next2">Next</button> -->
   <button (click)="denocbesS.dialnext()" class="buttone next3">Next</button>
   <button (click)="dnaibafS.dialnext()" class="buttone next4">Next</button>
 
   <div class="block">
+    <!-- Tarnas Insisde -->
     <img class="img1 imgcenter" src="../../../assets/image/prologue/prologuesimplonisentrance.jpeg" alt="" >
+    <!-- Tarnas arrive -->
     <img class="transright" src="../../../assets/image/TArnas2b.png" alt="">
-
     <img  class="img2 imgcenter" src="../../../assets/image/prologue/prologueimg1.jpeg" alt="">
-    <img class="img3 imgcenter" src="../../../assets/image/prologue/prologueHAngar1.jpeg" alt="">
+    <!-- Tarnas pose-->
+    <img class="img3 imgcenter" src="../../../assets/image/prologue/prologueHAngar1.png" alt="">
     <img class="transhangar" src="../../../assets/image/TArnas3.png" alt="">
+    <!-- Killa descend -->
+    <img class="imgKilla1 imgcenter" src="../../../assets/image/prologue/prologueKillaEntrance1.jpeg" alt="">
+    <img class="imgKilla2 imgcenter" src="../../../assets/image/prologue/prologueKillaEntrance2.jpeg" alt="">
+    <img class="imgKilla3 imgcenter" src="../../../assets/image/prologue/prologueKillaEntrance3.jpeg" alt="">
+    <!-- Hangar -->
     <img class="img4 imgcenter" src="../../../assets/image/prologue/prologueAureliaintro.jpeg" alt="">
-    <!-- <audio autoplay src="../../../assets/Sound/walk.mp3" *ngIf="walk"></audio> -->
     <img class="imgcha imgcharacter" src="../../../assets/image/characters/Aurelia.png" alt="">
     <img class="imgcha2 imgcharacter" src="../../../assets/image/characters/EnorcBes.png" alt="">
+    <!-- Button -->
     <img class="img5 imgcenter" src="../../../assets/image/prologue/prologueAureliaintrotrans2.jpeg" alt="">
+    <!-- Door open -->
     <img class="img6 imgcenter" src="../../../assets/image/prologue/prologueAureliaintrotrans1.jpeg" alt="">
-    <img class="img7 imgcenter" src="../../../assets/image/prologue/prologueintrobis.jpeg" alt="">
-    
+    <!-- Pont -->
+    <div class="imgBackgroundSpace"></div>
+    <img class="img7 imgcenter" src="../../../assets/image/prologue/prologueintrobis.png" alt="">
+    <!-- ascenseur -->
+    <img class="img8 imgcenter" src="../../../assets/image/prologue/prologueintrobisascenseur.png" alt="">
+    <img class="img9 imgcenter" src="../../../assets/image/prologue/prologueintrobisascenseur2.png" alt="">
+    <img class="img10 imgcenter" src="../../../assets/image/prologue/prologueintrobisascenseur3bis.jpeg" alt="">
+    <!-- Ascenseur open -->
+    <img class="img11 imgcenter" src="../../../assets/image/prologue/prologueintrobisascenseur3.jpeg" alt="">
+  
 <app-clickarea></app-clickarea>
 <app-choice></app-choice>
 
 
 
 </div>
+<audio #audioWalk  src="../../../assets/Sound/walk.mp3" ></audio>
+<audio #audioIntro loop src="../../../assets/Sound/intro2.mp3" ></audio>
+<audio #audioTarnas   src="../../../assets/Sound/tarnas.mp3" ></audio>
+<audio #audioTarnasInside loop src="../../../assets/Sound/spacetarnas.mp3" ></audio>
+<audio #audioTarnasPose src="../../../assets/Sound/tarnas2.mp3" ></audio>
+<audio #audioHangar loop src="../../../assets/Sound/hangarambiance.mp3" ></audio>
+<audio #audioPontAmbiance loop src="../../../assets/Sound/ambiancepont.mp3"></audio>
+<audio #audioButton  src="../../../assets/Sound/button.mp3" ></audio>
+<audio #audioDoorOpen src="../../../assets/Sound/dooropen.mp3" ></audio>
+<audio #audioDoorOpenBis src="../../../assets/Sound/dooropen2.mp3"></audio>
+<audio #audioWait  src="../../../assets/Sound/wait.mp3" ></audio>
+
+
+
+
+
+
+

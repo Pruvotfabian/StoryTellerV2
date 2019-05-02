@@ -15,8 +15,8 @@ export class SurchauffeService {
   refroidissement: number = 0;
   
   constructor() { 
-    
   }
+  
   shootf(){
     if (this.verifyshoot == 1) {
       this.shoot++;

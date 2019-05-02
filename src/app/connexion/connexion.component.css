@@ -1,6 +1,6 @@
 
 .back{
-    background-image: url(../../assets/image/accueil.jpeg);
+    background-image: url(../../assets/image/background.jpeg);
     position: absolute;
     background-repeat: none;
     background-size: cover;
@@ -49,7 +49,6 @@ p{
     padding: 2%;
     text-align: center;
     margin: 2%;
-    font-size: 1.5em;
     font-weight: bold;
     transition: 0.5s;
 }

@@ -45,7 +45,7 @@
     <div class="choix" *ngIf="dAureliaS.choix">
       <button class="btntop btnN btn" (click)="dAureliaS.choix1et2()">Oui ? ...</button>
       <button class="btnleft btnL btn" (click)="dAureliaS.choixL()">Ravie de vous rencontrer.</button>
-      <button class="btnright btnO btn" (click)="dAureliaS.choixO()" >J'ai pas le temps</button>
+      <button class="btnright btnO btn" (click)="dAureliaS.choixO()" >Je doit voir le capitaine immédiatement !</button>
       <button class="btnbottom btnN btn" (click)="dAureliaS.choix1et2()">Vous êtes ?</button>
     </div>
     <div class="choix" *ngIf="dAureliaS.choixb">
@@ -53,5 +53,9 @@
       <button class="btnleft btnN btn" (click)="dAureliaS.choixinfo2()">Comment avez vous connu le Capitaine ?</button>
       <button class="btnright btnN btn" (click)="dAureliaS.choixinfo3()" >Quels sont vos fonction ?</button>
       <button class="btnbottom btnN btn" (click)="dAureliaS.choixrevoir()" >Le capitaine m'attend on reparleras plus tard.</button>
+    </div>
+    <div class="choix" *ngIf="dAureliaS.choixc">
+        <button class="btnleft btnL btn" (click)="dAureliaS.choixLb()">Vous avez fait, ce que vous avez pu.</button>
+        <button class="btnright btnO btn" (click)="dAureliaS.choixOb()" >Vous auriez du les les protéger !</button>
     </div>
 

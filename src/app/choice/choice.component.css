@@ -12,12 +12,12 @@
   
   .btnL:hover{
     background: none;
-    color: orange;
+    color: rgb(1, 136, 214);
     transition: 0.5s;
   }
   .btnO:hover{
     background: none;
-    color: orange;
+    color: rgb(214, 3, 3);
     transition: 0.5s;
   }
   .btnright{

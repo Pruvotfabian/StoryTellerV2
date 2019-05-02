@@ -26,6 +26,7 @@ import { JeuxspacebattleComponent } from './Jeux/jeuxspacebattle/jeuxspacebattle
 import { ChoiceComponent } from './choice/choice.component';
 import { ClickareaComponent } from './clickarea/clickarea.component';
 
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -42,7 +43,8 @@ import { ClickareaComponent } from './clickarea/clickarea.component';
     HealbarComponent,
     JeuxspacebattleComponent,
     ChoiceComponent,
-    ClickareaComponent
+    ClickareaComponent,
+
   ],
   imports: [
     BrowserModule,

@@ -1,6 +1,7 @@
 import { Injectable } from '@angular/core';
 import { HeaderService } from '../header.service';
 import * as $ from 'jquery';
+import { KarmaService } from '../karma.service';
 
 @Injectable({
   providedIn: 'root'
@@ -9,10 +10,14 @@ export class AureliaService {
   introDialId: boolean = false;
   choix: boolean = false;
   choixb: boolean = false;
+  choixc: boolean = false;
   dialId : number = 0;
   clickarea1: boolean = false;
   
-  constructor(public dS: HeaderService) { }
+  constructor(
+    public dS: HeaderService,
+    public kS: KarmaService,
+    ) { }
 
      //debut Dial Aurelia
      dial(){
@@ -72,16 +77,34 @@ export class AureliaService {
     this.dS.test = "Mais moi de même je suis très heureuse de vous rencontrer, on parle de vous comme d'un héros, j'ai hâte que vous nous racontiez vos aventures commandant. Mais je suis impolie, mon nom est Aurelia. Caporale Aurelia";
     this.choix = false;
     this.choixb = true;
+    this.kS.lumineux++;
+  }
+  choixLb(){
+    this.dS.name = "Aurelia : ";
+    this.dS.test = "Mer ... [Se reprend] Merci Commandant ! ";
+    this.choixb = true;
+    this.choixc = false;
+    this.kS.lumineux += 5;
+    console.log(this.kS.lumineux);
   }
 
   // choix Obscure Aurelia
   choixO(){
-
     this.dS.name = "Aurelia : ";
-    this.dS.test = "Oh ! Oui ... Je suis désolé de vous avoir dérangé commandant. Le capitaine vous attend au poste de commandemant.";
+    this.dS.test = "Oh ! Oui bien sûr je suis désolé commmandant. Le capitaine vous attend au poste de commandemant.";
     this.choix = false;
     this.clickarea1 = true;
     $('.imgcha').removeClass('active');
+    this.kS.obscur++;
+  }
+  choixOb(){
+    this.dS.name = "Aurelia : ";
+    this.dS.test = "Je ne ... [Se lamente] ... tant de mort par ma faute ... j'aurais mieux fait d'y rester moi aussi... Le commandant vous attend sur le pont. Au revoir commandant."
+    this.choixc = false;
+    this.clickarea1 = true;
+    $('.imgcha').removeClass('active');
+    this.kS.obscur += 5;
+    console.log(this.kS.obscur);
   }
 
   dialnext(){
@@ -90,10 +113,11 @@ export class AureliaService {
     if (this.dialId === 1) {
       this.dS.name = "Commandant Kila :";
       this.dS.test = "Vos amis était des rebelles ?";
+      
     }
     if (this.dialId === 2) {
       this.dS.name = "Aurelia : ";
-      this.dS.test = "Absolument pas. Certes le principal objectif de ce raid était de détruire une cellule rebelle présente dans ce secteur. Mais les impériaux non fait aucune distinction entre rebelle et civil...";
+      this.dS.test = "Absolument pas. Certes le principal objectif du raid était de détruire une cellule rebelle local. Mais les impériaux non fait aucune distinction entre rebelle et ... civil.";
       $('.next').removeClass('active');
       this.dialId = 0;
     }
@@ -101,15 +125,17 @@ export class AureliaService {
     if (this.dialId === 4) {
       this.dS.name = "Commandant Kila : ";
       this.dS.test = "Il vous a sauvé ?";
+      this.choixb = false;
     }
     if (this.dialId === 5) {
       this.dS.name = "Aurelia : ";
-      this.dS.test = "Oui, a l'époque j'avais déjà rejoint la rébellion. Mon équipe et moi étions en mission de reconnaissance mais ...";
+      this.dS.test = "Oui, à l'époque j'avais déjà rejoint la rébellion. Mon équipe et moi étions partis en mission de reconnaissance mais ...";
     }
     if (this.dialId === 6) {
       this.dS.name = "Aurelia : ";
-      this.dS.test = "On est tombé dans une embuscade pirate on a tenu le plus longtemps possible, mais de toute mon équipe je suis la seule à avoir survécue... Le capitaine est arrivé juste à tant pour me sauver.";
+      this.dS.test = "On est tombé dans une embuscade pirate...[sanglote] on a tenu le plus longtemps possible, mais toute mon équipe a été décimée je ... je suis la seule à avoir survécue... Le capitaine est arrivé juste à temps pour me sauver.";
       $('.next').removeClass('active');
+      this.choixc = true;
       this.dialId = 0;
     }
 

@@ -35,6 +35,12 @@ export class NaibafService {
       this.choix = false;
       this.choixb = true;
     }
+    choixneutreb(){
+      this.dS.name = "Nai Baf :";
+      this.dS.test = "N'oubliez pas ce que je vous est dit ! ";
+      this.choixb = false;
+      this.introDialId = true;
+    }
       //choix lumineux Enorc Bes
   choixL(){
     this.dS.name = "Nai Baf : ";

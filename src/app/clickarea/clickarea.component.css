@@ -77,3 +77,12 @@
     top: 17%;
     left: 25%;
   }
+  .continued2{
+    z-index: 5;
+    cursor: pointer;
+    position: absolute;
+    height: 69px;
+    width: 54px;
+    top: 29%;
+    left: 14%;
+  }

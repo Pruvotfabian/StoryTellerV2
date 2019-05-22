@@ -1,3 +1,154 @@
-<p>
-  jeuxspacebattle works!
-</p>
+<app-chargement *ngIf="chargement"></app-chargement>
+<app-header></app-header>
+<app-clickarea></app-clickarea>
+<app-choice></app-choice>
+
+<!-- script -->
+
+<!-- Destroyer stellaire ouvre le feu sur le tarnas script OK Sound NO--> 
+<!-- Choix sauver le tarnas résultat mort de Enorc Bes Tarnas sauver destroyer endomager script NO Sound NO-->
+<!-- Choix sacrifier le tarnas résultat tarnas et son équipage mort Impact dans l'épisode 2 script OK Sound NO-->
+<!-- Canon du Simplonis Chargé Parée a faire feu 10sec script OK Sound NO-->
+<!-- Destroyer stellaire détruit retour a la base 10sec script OK Sound NO-->
+<!-- capsule de sauvetage impérial larguer choix les épargner conséquence traitre se sounviendras good script OK Sound NO-->
+<!-- capsule de sauvetage impérial larguer choix les détruire conséquence traitre se sounviendras bad script OK Sound NO-->
+<!-- Arriver de la flotte de vador script NO Sound NO-->
+<!-- dial avec le commodore Math Ieu script NO Sound NO-->
+<!-- Toute les escadrons retourne au hangar Le commodore lance l'assaut 20sec script NO Sound NO-->
+
+<div class = "back" >
+  <div class="imgBackgroundSpace"></div>
+    <div class="block">
+      <!-- Arriver du destroyer Stellaire -->
+      <img class="transcenter" src="../../../assets/image/ship/Stardest.png" alt="">
+      <!-- dans le Destroyer Stellaire -->
+      <img class="imgdest1 imgcenter" src="../../../assets/image/thearrival/thearrivalsstardestroyer1.png" alt="">
+      <img class="transleft" src="../../../assets/image/ship/SIMPLONIS.png" alt="">
+      <!-- Dial avec lieutenant -->
+      <img class="imgdest2bis imgcenter" src="../../../assets/image/thearrival/thearrivalsstardestroyer2bis.png" alt="">
+      <img class="imgdest2ter imgcenter" src="../../../assets/image/thearrival/thearrivalsstardestroyer2ter.png" alt="">
+      <img class="imgdest2 imgcenter" src="../../../assets/image/thearrival/thearrivalsstardestroyer2.png" alt="">
+      <!-- Dans le simplonis ascenseur -->
+      <img class="imgsimplonis1 imgcenter" src="../../../assets/image/thearrival/thearrivalsSimplonisascenseur1.jpeg" alt="">
+      <img class="imgsimplonis2 imgcenter" src="../../../assets/image/thearrival/thearrivalsSimplonisascenseur2.jpeg" alt="">
+      <!-- Dans le simplonis Pont -->
+      <img class="imgsimplonispont1 imgcenter" src="../../../assets/image/thearrival/thearrivalsSimplonispont1.jpeg" alt="">
+      <img class="imgsimplonispont2 imgcenter" src="../../../assets/image/thearrival/thearrivalsSimplonisPont2.png" alt="">
+      <img class="imgsimplonispont3 imgcenter" src="../../../assets/image/thearrival/thearrivalsSimplonispontxwing.jpeg" alt="">
+      <img class="imgsimplonispont4 imgcenter" src="../../../assets/image/thearrival/thearrivalsSimplonisPontxwing2.png" alt="">
+      <!-- space battle prologue -->
+      <img class="transrightsquadron" src="../../../assets/image/ship/squadron.png" alt="">
+      <img class="transrighttarnas" src="../../../assets/image/ship/TArnas2.png" alt="">
+      <!-- Cockpit -->
+      <img class="imgcockpit imgcenter" src="../../../assets/image/ship/cockpit.png" alt="">
+      <!-- Space -->
+      <img class="imgsimplonisspace1 imgcenter" src="../../../assets/image/thearrival/thearrivalsSimplonisdontattack.jpeg" alt="">
+      <img class="imgsimplonisspace2 imgcenter" src="../../../assets/image/thearrival/thearrivalsspacebattlebegin.jpeg" alt="">
+      <img class="imgtiesquadron" src="../../../assets/image/ship/tiefigtersquadron.png" alt="">
+      <!-- battleSpace first part -->
+      <img class="imgcockpitleft imgcenter" src="../../../assets/image/ship/cockpitleft.png" alt="">
+
+      <!-- inside Simponis -->
+      <img class="imgsimplonisPontPrepare imgcenter" src="../../../assets/image/thearrival/thearrivalsSimplonisPontPrepare.png" alt="">
+      <!-- tarnas alert -->
+      <img class="imgTarnashelp imgcenter" src="../../../assets/image/thearrival/thearrivalstarnashelp.jpeg" alt="">
+      <!-- dest open fire -->
+      <img class="imgdestopenfire imgcenter" src="../../../assets/image/thearrival/thearrivalsstardestroyer3dontattack.jpeg" alt="">
+      <img class="imgdestopenfire2 imgcenter" src="../../../assets/image/thearrival/thearrivalsstardestroyer3attack.jpeg" alt="">
+      <img class="imgdestopenfire3 imgcenter" src="../../../assets/image/thearrival/thearrivalsstardestroyer3attackbis.jpeg" alt="">
+      <!-- si tarnas sauver -->
+        <!-- Battle space second part -->
+          <img src="" alt="">
+
+      <!-- si tarnas sacrifier -->
+      <img class="imgTarnasdest imgcenter" src="../../../assets/image/thearrival/thearrivalstarnashelp.jpeg" alt="">
+      <img class="imgTarnasdest2 imgcenter"  src="../../../assets/image/thearrival/thearrivalstarnasexplo1.jpeg" alt="">
+      <img class="imgTarnasdest3 imgcenter"  src="../../../assets/image/thearrival/thearrivalstarnasexplo2.jpeg" alt="">
+      
+      <!-- Simplonis paré -->
+      <img class="imgsimplonisPontParé imgcenter" src="../../../assets/image/thearrival/thearrivalsSimplonisPontPrepare.png" alt="">
+      <!-- Simplonis open fire -->
+      <img class="imgsimplonisPontultimefire imgcenter"  src="../../../assets/image/thearrival/thearrivalsSimplonisultimeweapon1.jpeg" alt="">
+      <img class="imgsimplonisend imgcenter"  src="../../../assets/image/thearrival/thearrivalsend1.png" alt="">
+      <!-- openfire -->
+      <img class="imgsimplonisPontultimefire2 imgcenter"  src="../../../assets/image/thearrival/thearrivalsSimplonisultimeweapon2.jpeg" alt="">
+      <img class="imgsimplonisend2 imgcenter"  src="../../../assets/image/thearrival/thearrivalsend2.png" alt="">
+      <!-- fire !!! -->
+      <img class="imgsimplonisPontultimefire3 imgcenter"  src="../../../assets/image/thearrival/thearrivalsSimplonisultimeweapon3.jpeg" alt="">
+      <img class="imgsimplonisend3 imgcenter"  src="../../../assets/image/thearrival/thearrivalsend3.png" alt="">
+      <img class="imgsimplonisend4 imgcenter"  src="../../../assets/image/thearrival/thearrivalsend4.jpeg" alt="">
+      <!-- empire evacuate -->
+      <img class="imgsimplonispod imgcenter" src="../../../assets/image/thearrival/thearrivalsstardestroyerescapeinsidecapsule.jpeg" alt="">
+      <img class="imgsimplonisevacuate imgcenter" src="../../../assets/image/thearrival/thearrivalsstardestroyerescape.png" alt="">
+      <img class="imgsimplonisevacuateinside imgcenter" src="../../../assets/image/thearrival/thearrivalsstardestroyerescapeinsidecapsule.jpeg" alt="">
+      
+      <!-- the choice -->
+      <img class="imgthechoiceTranasDest imgcenter" src="../../../assets/image/thearrival/thearrivalsstardestroyerescapechoiceTarnasdestroye.jpeg" alt="">
+      <img class="imgthechoiceTranasOK imgcenter" src="../../../assets/image/thearrival/thearrivalsstardestroyerescapechoiceTarnasOk.jpeg" alt="">
+      
+      <!-- Spare -->
+      <img class="imgthechoiceSpare imgcenter" src="../../../assets/image/thearrival/thearrivalsSimplonisdontattack.jpeg" alt="">
+      
+      <!-- Revenge -->
+      <img class="imgthechoiceRevenge imgcenter" src="../../../assets/image/thearrival/thearrivalsSimplonisdontattack.jpeg" alt="">
+      <img class="imgthechoiceRevenge2 imgcenter" src="../../../assets/image/thearrival/thearrivalsSimplonisattack.jpeg" alt="">
+      <img class="imgthechoiceRevenge3 imgcenter" src="../../../assets/image/thearrival/thearrivalsstardestroyerescapeinsidecapsule.jpeg" alt="">
+      <img class="imgthechoiceRevenge4 imgcenter" src="../../../assets/image/thearrival/thearrivalsstardestroyeresdestoyesurvivorexplo1.jpeg" alt="">
+      <img class="imgthechoiceRevenge5 imgcenter" src="../../../assets/image/thearrival/thearrivalsstardestroyeresdestoyesurvivorexplo2.jpeg" alt="">
+      <img class="imgthechoiceRevenge6 imgcenter" src="../../../assets/image/thearrival/thearrivalsstardestroyeresdestoyesurvivorexplo3.jpeg" alt="">
+      <img class="imgthechoiceRevenge7 imgcenter" src="../../../assets/image/thearrival/thearrivalsstardestroyeresdestoyesurvivorexplo4.jpeg" alt="">
+      
+      <!-- vador arrivals -->
+        <!-- retour au hangar -->
+      <!-- <img src="" alt=""> -->
+        <!-- Alert -->
+      <!-- <img src="" alt=""> -->
+        <!-- Vador -->
+      <!-- <img src="" alt=""> -->
+        <!-- All Ship Open fire -->
+      <!-- <img src="" alt=""> -->
+
+      <!-- The end of part 2 -->
+    </div>
+</div>
+
+
+
+<!-- BATTLE -->
+ <!-- <div class=backBattle (click)="sound()" (click)="sd.shooting()" (click)="sd.shootf()" *ngIf="battle">
+ 
+</div> -->
+<!-- Surchauffe -->
+<!-- <div class="box" *ngIf="battle">
+  <div class="contain">
+    <div class="alert" *ngIf="sd.alertS">SURCHAUFFE...</div>
+    <div class="verylow" *ngIf="sd.verylow"></div>
+    <div class="low" *ngIf="sd.lowc"></div>
+    <div class="medium" *ngIf="sd.mediumc"></div>
+    <div class="mediumplus" *ngIf="sd.mediumplus"></div>
+    <div class="warning" *ngIf="sd.warningc"></div>
+  </div>
+</div>  -->
+
+<!-- Target -->
+<!-- <div class="cursor" id="cursor" ><img class="target" src="../../assets/image/target.png" alt=""></div> -->
+
+
+
+<!-- Sound -->
+<audio #audioWalk  src="../../../assets/Sound/walk.mp3" ></audio>
+<audio #audioHangar loop src="../../../assets/Sound/hangarambiance.mp3" ></audio>
+<audio #audioWait  src="../../../assets/Sound/elevator sound.mp3" ></audio>
+<audio #audioDoorOpenBis src="../../../assets/Sound/dooropen2.mp3"></audio>
+<audio #audioPontAmbiance loop src="../../../assets/Sound/ambiancepont.mp3"></audio>
+<audio #audioJump src="../../../assets/Sound/jump.mp3"></audio>
+<audio #audioDecollage src="../../../assets/Sound/decollage.mp3"></audio>
+<audio #audioSquadron src="../../../assets/Sound/xwingsquadr.mp3"></audio>
+<audio #audioTarnas src="../../../assets/Sound/tarnas.mp3"></audio>
+<audio #audioAlarm loop src="../../../assets/Sound/alarm.mp3"></audio>
+<audio #audioMotor loop src="../../../assets/Sound/x-wingmotor.mp3"></audio>
+<audio #audioShoot src="../../../assets/Sound/x-wingshoot.mp3"></audio>
+
+
+<!-- Music -->
+<audio #audioArrival src="../../../assets/Sound/arrival.mp3"></audio>

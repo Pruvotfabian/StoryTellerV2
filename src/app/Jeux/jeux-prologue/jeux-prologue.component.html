@@ -6,23 +6,24 @@
 
 <div class = "back" >
   <!-- INTRO -->
-  <img class="transleft" src="../../../assets/image/SIMPLONIS.png" alt="">
-  <img class="transtop" src="../../../assets/image/Tarnas.png" alt="">
+  <img class="transleft" src="../../../assets/image/ship/SIMPLONIS.png" alt="">
+  <img class="transtop" src="../../../assets/image/ship/Tarnas.png" alt="">
   <!-- button next -->
   <button (click)="dAureliaS.dialnext()" class="buttone next">Next</button>
-  <!-- <button (click)="d20100S.dialnext()" class="buttone next2">Next</button> -->
+  <button (click)="d20100S.dialnext()" class="buttone next2">Next</button>
   <button (click)="denocbesS.dialnext()" class="buttone next3">Next</button>
   <button (click)="dnaibafS.dialnext()" class="buttone next4">Next</button>
+  <button (click)="dchristophhisS.dialnext()" class="buttone next5">Next</button>
 
   <div class="block">
     <!-- Tarnas Insisde -->
     <img class="img1 imgcenter" src="../../../assets/image/prologue/prologuesimplonisentrance.jpeg" alt="" >
     <!-- Tarnas arrive -->
-    <img class="transright" src="../../../assets/image/TArnas2b.png" alt="">
+    <img class="transright" src="../../../assets/image/ship/TArnas2b.png" alt="">
     <img  class="img2 imgcenter" src="../../../assets/image/prologue/prologueimg1.jpeg" alt="">
     <!-- Tarnas pose-->
     <img class="img3 imgcenter" src="../../../assets/image/prologue/prologueHAngar1.png" alt="">
-    <img class="transhangar" src="../../../assets/image/TArnas3.png" alt="">
+    <img class="transhangar" src="../../../assets/image/ship/TArnas3.png" alt="">
     <!-- Killa descend -->
     <img class="imgKilla1 imgcenter" src="../../../assets/image/prologue/prologueKillaEntrance1.jpeg" alt="">
     <img class="imgKilla2 imgcenter" src="../../../assets/image/prologue/prologueKillaEntrance2.jpeg" alt="">
@@ -44,15 +45,23 @@
     <img class="img10 imgcenter" src="../../../assets/image/prologue/prologueintrobisascenseur3bis.jpeg" alt="">
     <!-- Ascenseur open -->
     <img class="img11 imgcenter" src="../../../assets/image/prologue/prologueintrobisascenseur3.jpeg" alt="">
-  
-<app-clickarea></app-clickarea>
+    <!-- Pont commandemant -->
+    <img class="imgportecommandemant imgcenter" src="../../../assets/image/prologue/prologuepont.jpeg" alt="">
+    <img class="imgpostecommandemant imgcenter" src="../../../assets/image/prologue/prologuepostecommandemant1.png" alt="">
+    <img class="imgportecommandemantbis imgcenter" src="../../../assets/image/prologue/prologuepostecommandemant2.png" alt="">
+    
+    <app-clickarea></app-clickarea>
 <app-choice></app-choice>
 
 
 
 </div>
+
+
+
+<!-- Sound -->
 <audio #audioWalk  src="../../../assets/Sound/walk.mp3" ></audio>
-<audio #audioIntro loop src="../../../assets/Sound/intro2.mp3" ></audio>
+<audio #audioIntro  loop src="../../../assets/Sound/intro2.mp3" ></audio>
 <audio #audioTarnas   src="../../../assets/Sound/tarnas.mp3" ></audio>
 <audio #audioTarnasInside loop src="../../../assets/Sound/spacetarnas.mp3" ></audio>
 <audio #audioTarnasPose src="../../../assets/Sound/tarnas2.mp3" ></audio>
@@ -61,7 +70,7 @@
 <audio #audioButton  src="../../../assets/Sound/button.mp3" ></audio>
 <audio #audioDoorOpen src="../../../assets/Sound/dooropen.mp3" ></audio>
 <audio #audioDoorOpenBis src="../../../assets/Sound/dooropen2.mp3"></audio>
-<audio #audioWait  src="../../../assets/Sound/wait.mp3" ></audio>
+<audio #audioWait  src="../../../assets/Sound/elevator sound.mp3" ></audio>
 
 
 

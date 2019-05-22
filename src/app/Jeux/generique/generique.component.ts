@@ -1,5 +1,6 @@
 import { Component, OnInit, ViewChild, ElementRef } from '@angular/core';
 import { Router } from '@angular/router';
+import { TheGameComponent } from '../the-game/the-game.component';
 
 @Component({
   selector: 'app-generique',
@@ -8,9 +9,14 @@ import { Router } from '@angular/router';
 })
 export class GeneriqueComponent implements OnInit {
   intro: boolean = true;
+  generique: boolean = true;
   debut: boolean = false;
 
-  constructor(public route: Router) {
+
+  constructor(
+    public route: Router,
+    public game: TheGameComponent,
+    ) {
    }
    @ViewChild('audioIntro') audioPlayerRefIntro: ElementRef;
   ngOnInit() {
@@ -21,7 +27,7 @@ export class GeneriqueComponent implements OnInit {
       this.intro = false;
     },80000)
     setTimeout(() => {
-      this.route.navigate(['/la-chute-du-simplonis'])
+      this.game.debut();
     },88000)
   }
 

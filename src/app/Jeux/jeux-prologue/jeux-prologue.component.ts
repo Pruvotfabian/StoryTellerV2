@@ -1,5 +1,4 @@
 import { Component, OnInit, ViewChild, ElementRef } from '@angular/core';
-import { EnemisService } from '../../service/enemis.service'
 import { HeaderService } from 'src/app/service/header.service';
 import { TropheeService } from 'src/app/service/trophee.service';
 import * as $ from 'jquery';
@@ -7,6 +6,9 @@ import { vingtcentService } from 'src/app/service/character/20100.service';
 import { AureliaService } from 'src/app/service/character/aurelia.service';
 import { EnorcbesService } from 'src/app/service/character/enorcbes.service';
 import { NaibafService } from 'src/app/service/character/naibaf.service';
+import { ChristophhisService } from 'src/app/service/character/christophhis.service';
+import { TheGameComponent } from '../the-game/the-game.component';
+
 
 
 @Component({
@@ -16,6 +18,8 @@ import { NaibafService } from 'src/app/service/character/naibaf.service';
 })
 export class JeuxPrologueComponent implements OnInit {
   clickarea2: boolean = false;
+  clickarea3: boolean = false;
+
   chargement: boolean = true;
   choix2: boolean = false;
   choix4: boolean = false;
@@ -24,14 +28,14 @@ export class JeuxPrologueComponent implements OnInit {
 
 
   constructor(
-    
-    public eS: EnemisService, 
+    public game: TheGameComponent,
     public dS: HeaderService, 
     public tS: TropheeService, 
     public d20100S: vingtcentService,
     public dAureliaS: AureliaService,
     public denocbesS: EnorcbesService,
     public dnaibafS: NaibafService,
+    public dchristophhisS: ChristophhisService,
     ) {
 
    }
@@ -49,16 +53,16 @@ export class JeuxPrologueComponent implements OnInit {
    @ViewChild('audioWalk') audioPlayerRefWalk: ElementRef;
    
   ngOnInit() {
-         //chargement
-         setTimeout(() => {
-          //Sound intro
-          this.audioPlayerRefIntro.nativeElement.play(); 
-          // fin chargement
-          this.chargement = false;
-          this.chargementOk()
-        },8000)
-   
+       //chargement
+       setTimeout(() => {
+        //Sound intro
+        this.audioPlayerRefIntro.nativeElement.play(); 
+        // fin chargement
+        this.chargement = false;
+        this.chargementOk()
+      },8000)
   }
+  
   chargementOk(){
       // transition vaiseaux
       $('.transleft').addClass('active');
@@ -75,7 +79,7 @@ export class JeuxPrologueComponent implements OnInit {
       this.audioPlayerRefTarnasInside.nativeElement.play(); 
       //Dial Pilote
       this.dS.name = "Pilote : ";
-      this.dS.test = "En approche du Simplonis Commandant ! [Ouvre le canal] Ici le Tarnas, demande autorisation d'atterrir... ";
+      this.dS.test = "En approche du Simplonis Commandant! [Ouvre le canal] Ici le Tarnas, demande autorisation d'atterrir... ";
       // image Tarnas
       $('.img2').addClass('active');
       // retire effet Trans 
@@ -89,7 +93,7 @@ export class JeuxPrologueComponent implements OnInit {
       this.audioPlayerRefTarnasInside.nativeElement.pause(); 
       // dial officier de pont
       this.dS.name = "Officier de pont : ";
-      this.dS.test = "Autorisation d'atterrir accordé Tarnas, rendez-vous au hangar B !";
+      this.dS.test = "Autorisation d'atterrir accordé Tarnas, rendez-vous au hangar B!";
       //Image Simplonis pont
       $('.img1').addClass('active');
       // trans tarnas
@@ -203,7 +207,7 @@ export class JeuxPrologueComponent implements OnInit {
       this.audioPlayerRefDoorOpenBis.nativeElement.play();
       // kailly
       this.dS.name = "Lieutenant Kailly : ";
-      this.dS.test = "Ah ! Commandant, vous montez ? Je vous fait une place [Se Décale]";
+      this.dS.test = "Ah! Commandant, vous montez? Je vous fait une place [Se Décale]";
       // ascenseur image 2
       $('.img9').addClass('active');
     },3000)
@@ -217,21 +221,62 @@ export class JeuxPrologueComponent implements OnInit {
       this.audioPlayerRefWait.nativeElement.play(); 
       // ascenseur inside
       $('.img10').addClass('active');
-    },5000)
+    },8000)
     setTimeout(() => {
       // sound door open
       this.audioPlayerRefDoorOpenBis.nativeElement.play();
       // dial Kailly
       this.dS.name = "Lieutenant Kailly : ";
-      this.dS.test = "C'est la fin de la demo";
+      this.dS.test = "On est arrivé, Commandant";
       // fin wait
       this.audioPlayerRefWait.nativeElement.pause(); 
       // image pont 3
       $('.img11').addClass('active');
-    },23000)
-
+    },27000)
+    setTimeout(() => {
+       // door walk
+       this.audioPlayerRefWalk.nativeElement.play(); 
+      // dial garde
+      this.dS.name = "Garde 1 : ";
+      this.dS.test = "Stop! Identifiez-vous! ";
+      // image porte
+      $('.imgportecommandemant').addClass('active');
+    }, 27000);
+    setTimeout(() => {
+       // dial garde
+       this.dS.name = "Garde 2 : ";
+       this.dS.test = "Non, Emery il s'agit du commandant Kila pas besoins...";
+    }, 31000);
+    setTimeout(() => {
+      // door Sound
+      this.audioPlayerRefDoorOpen.nativeElement.play();
+      // reset
+     $('.img9').removeClass('active');
+     $('.img10').removeClass('active');
+     $('.img11').removeClass('active');
+     $('.imgportecommandemant').removeClass('active');
+      // dial garde
+      this.dS.name = "Emery : ";
+      this.dS.test = "Ah! Désolé commandant... Mesure de sécurité, vous pouvez passer";
+      // image poste de c
+      $('.imgpostecommandemant').addClass('active');
+   }, 38000);
+   setTimeout(() => {
+     //reset
+     $('.imgpostecommandemant').removeClass('active');
+    this.dS.name = "";
+    this.dS.test = "";
+    // pont Sound 
+    this.audioPlayerRefPont.nativeElement.play();
+    //click area
+    this.clickarea3 = true;
+    // image poste de c
+    $('.imgportecommandemantbis').addClass('active');
+   }, 44000);
   }
   
- 
+  attack(){
+    this.game.spacebattle();
+  }
   
 }

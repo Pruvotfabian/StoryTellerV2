@@ -20,6 +20,6 @@ export class ConnexionComponent implements OnInit {
   ngOnInit() {
   }
   startNC(){
-    this.route.navigate(['/generique'])
+    this.route.navigate(['/la-chute-du-simplonis'])
   }
 }

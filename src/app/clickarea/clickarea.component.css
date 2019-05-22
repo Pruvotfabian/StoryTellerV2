@@ -68,6 +68,70 @@
     top: 14%;
     left: 35%;
   }
+  .Christophiss{
+    cursor: pointer;
+    z-index: 5;
+    position: absolute;
+    height: 281px;
+    width: 100px;
+    top: 29%;
+    left: 11%;
+  }
+  .a20-100{
+    z-index: 2;
+    position: absolute;
+    height: 382px;
+    width: 124px;
+    top: 40%;
+    left: 65%;
+    cursor: pointer;
+  }
+  .soldta3{
+    z-index: 2;
+    position: absolute;
+    height: 234px;
+    width: 124px;;
+    top: 34%;
+    left: 86%;
+    cursor: pointer;
+  }
+  .officier1{
+    z-index: 2;
+    position: absolute;
+    height: 153px;
+    width: 87px;
+    top: 18%;
+    left: 36%;
+    cursor: pointer;
+  }
+  .officier2{
+    z-index: 2;
+    position: absolute;
+    height: 153px;
+    width: 87px;
+    top: 18%;
+    left: 49%;
+    cursor: pointer;
+  }
+  .hangar{
+    z-index: 2;
+    cursor: pointer;
+    position: absolute;
+    top: 0%;
+    left: 30%;
+    width: 40%;
+    height: 393px;
+  }
+  .JoaKim2{
+    z-index: 2;
+    cursor: pointer;
+    position: absolute;
+    top: 19%;
+    left: 16%;
+    width: 13%;
+    height: 304px;
+  }
+
   .soldatrebel2{
     z-index: 5;
     cursor: pointer;
@@ -85,4 +149,13 @@
     width: 54px;
     top: 29%;
     left: 14%;
+  }
+  .casque{
+    cursor: pointer;
+    position: absolute;
+    z-index: 2;
+    top: 33%;
+    right: 4%;
+    height: 104px;
+    width: 100px;
   }

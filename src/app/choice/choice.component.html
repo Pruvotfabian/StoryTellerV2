@@ -1,61 +1,88 @@
     <!-- rubrique choix gros équipe nai baf enorc bes et 20-100 -->
     <!-- 100-20 -->
     <div class="choix" *ngIf="d20100S.choix">
-      <button class="btntop btnN btn" (click)="d20100S.choixneutre()">Un séparatiste ?</button>
-      <button class="btnleft btnL btn" (click)="d20100S.choixL()">Bien le bonjour 20-100</button>
-      <button class="btnright btnO btn" (click)="d20100S.choixO()" >Je deteste les séparatistes !</button>
-      <button class="btnbottom btnN btn" (click)="d20100S.choixneutre()">Qu'est ce que ?</button>
+      <button class="btntop btnN btn" (click)="d20100S.choixneutre()">Oui?</button>
+      <button class="btnleft btnL btn" (click)="d20100S.choixL()">Salutation!</button>
+      <button class="btnright btnO btn" (click)="d20100S.choixO()" >Je doit voir le capitaine tout de suite!</button>
+      <button class="btnbottom btnN btn" (click)="d20100S.choixneutre()">Oui?</button>
     </div>
     <div class="choix" *ngIf="d20100S.choixb">
-      <button class="btntop btnN btn" (click)="d20100S.choixinfo1()">Pourquoi 20-100 ?</button>
-      <button class="btnleft btnN btn" (click)="d20100S.choixinfo2()">Votre langague ?</button>
-      <button class="btnright btnN btn" (click)="d20100S.choixinfo3()" >Quels sont vos fonction ?</button>
+      <button class="btntop btnN btn" (click)="d20100S.choixinfo1()">Pourquoi 20-100?</button>
+      <button class="btnleft btnN btn" (click)="d20100S.choixinfo2()">Votre langague?</button>
+      <button class="btnright btnN btn" (click)="d20100S.choixinfo3()" >Quels sont vos fonction?</button>
       <button class="btnbottom btnN btn" (click)="d20100S.choixrevoir()" >On reparleras plus tard.</button>
     </div>
 
     <!-- Nai Baf -->
     <div class="choix" *ngIf="dnaibafS.choix">
-      <button class="btntop btnN btn" (click)="dnaibafS.choixneutre()">Oui ?</button>
-      <button class="btnleft btnL btn" (click)="dnaibafS.choixL()">C'est a quel sujet ?</button>
-      <button class="btnright btnO btn" (click)="dnaibafS.choixO()" >Ça ne vous regarde pas</button>
-      <button class="btnbottom btnN btn" (click)="dnaibafS.choixneutre()">Et ?</button>
+      <button class="btntop btnN btn" (click)="dnaibafS.choixneutre()">Oui?</button>
+      <button class="btnleft btnL btn" (click)="dnaibafS.choixL()">Enchanté!</button>
+      <button class="btnright btnO btn" (click)="dnaibafS.choixO()" >Je n'ai pas le temps!</button>
+      <button class="btnbottom btnN btn" (click)="dnaibafS.choixneutre()">Qui y a t'il?</button>
     </div>
     <div class="choix" *ngIf="dnaibafS.choixb">
-      <button class="btntop btnN btn" (click)="dnaibafS.choixneutreb()">Si vous le dites...</button>
-      <button class="btnleft btnL btn" (click)="dnaibafS.choixLb()">Ne manquer pas de respect a votre lieutenant</button>
-      <button class="btnright btnO btn" (click)="dnaibafS.choixOb()" >[ menacer ] faites attention a ce que vous dites Soldat !</button>
-      <button class="btnbottom btnN btn" (click)="dnaibafS.choixneutreb()">On verras...</button>
+      <button class="btntop btnN btn" (click)="dnaibafS.choixneutreb()">Vous êtes sur?</button>
+      <button class="btnleft btnL btn" (click)="dnaibafS.choixLb()">Ne manquer pas de respect à votre lieutenant</button>
+      <button class="btnright btnO btn" (click)="dnaibafS.choixOb()" >[Menacer] Faites attention à ce que vous dites Soldat!</button>
+      <button class="btnbottom btnN btn" (click)="dnaibafS.choixneutreb()">Dites moi</button>
     </div>
 
     <!-- enorc bes -->
     <div class="choix" *ngIf="denocbesS.choix">
       <button class="btntop btnN btn" (click)="denocbesS.choixneutre()">Bonjour...</button>
       <button class="btnleft btnL btn" (click)="denocbesS.choixL()">[SALUER]</button>
-      <button class="btnright btnO btn" (click)="denocbesS.choixO()" >J'ai pas le temps !</button>
+      <button class="btnright btnO btn" (click)="denocbesS.choixO()" >Le capitaine m'attend!</button>
       <button class="btnbottom btnN btn" (click)="denocbesS.choixneutre()">Bonjour...</button>
     </div>
     <div class="choix" *ngIf="denocbesS.choixb">
       <button class="btntop btnN btn" (click)="denocbesS.choixinfo1()">Comment avez vous rejoint la rébellion?</button>
-      <button class="btnleft btnN btn" (click)="denocbesS.choixinfo2()">Comment avez vous connu le Capitaine ?</button>
-      <button class="btnright btnN btn" (click)="denocbesS.choixinfo3()" >Quels sont vos fonction ?</button>
-      <button class="btnbottom btnN btn" (click)="denocbesS.choixrevoir()" >On reparleras plus tard le capitaine m'attend</button>
+      <button class="btnleft btnN btn" (click)="denocbesS.choixinfo2()">Que savez vous sur le Capitaine?</button>
+      <button class="btnright btnN btn" (click)="denocbesS.choixinfo3()" >Quels sont vos fonction?</button>
+      <button class="btnbottom btnN btn" (click)="denocbesS.choixrevoir()" >On reparleras plus tard.</button>
+    </div>
+    <div class="choix" *ngIf="denocbesS.choixc">
+        <button class="btnleft btnL btn" (click)="denocbesS.choixLb()">Je suis désolé...</button>
+        <button class="btnright btnO btn" (click)="denocbesS.choixOb()" >Rester à votre place lieutenant! Je suis votre commandant!</button>
     </div>
 
     <!-- rubrique choix dialogue AURELIA-->
     <div class="choix" *ngIf="dAureliaS.choix">
-      <button class="btntop btnN btn" (click)="dAureliaS.choix1et2()">Oui ? ...</button>
+      <button class="btntop btnN btn" (click)="dAureliaS.choix1et2()">Oui? ...</button>
       <button class="btnleft btnL btn" (click)="dAureliaS.choixL()">Ravie de vous rencontrer.</button>
-      <button class="btnright btnO btn" (click)="dAureliaS.choixO()" >Je doit voir le capitaine immédiatement !</button>
-      <button class="btnbottom btnN btn" (click)="dAureliaS.choix1et2()">Vous êtes ?</button>
+      <button class="btnright btnO btn" (click)="dAureliaS.choixO()" >Je doit voir le capitaine immédiatement!</button>
+      <button class="btnbottom btnN btn" (click)="dAureliaS.choix1et2()">Vous êtes?</button>
     </div>
     <div class="choix" *ngIf="dAureliaS.choixb">
-      <button class="btntop btnN btn" (click)="dAureliaS.choixinfo1()">Pourquoi avoir rejoint la rebellion ?</button>
-      <button class="btnleft btnN btn" (click)="dAureliaS.choixinfo2()">Comment avez vous connu le Capitaine ?</button>
-      <button class="btnright btnN btn" (click)="dAureliaS.choixinfo3()" >Quels sont vos fonction ?</button>
+      <button class="btntop btnN btn" (click)="dAureliaS.choixinfo1()">Pourquoi avoir rejoint la rebellion?</button>
+      <button class="btnleft btnN btn" (click)="dAureliaS.choixinfo2()">Comment avez vous connu le Capitaine?</button>
+      <button class="btnright btnN btn" (click)="dAureliaS.choixinfo3()" >Quels sont vos fonction?</button>
       <button class="btnbottom btnN btn" (click)="dAureliaS.choixrevoir()" >Le capitaine m'attend on reparleras plus tard.</button>
     </div>
     <div class="choix" *ngIf="dAureliaS.choixc">
         <button class="btnleft btnL btn" (click)="dAureliaS.choixLb()">Vous avez fait, ce que vous avez pu.</button>
-        <button class="btnright btnO btn" (click)="dAureliaS.choixOb()" >Vous auriez du les les protéger !</button>
+        <button class="btnright btnO btn" (click)="dAureliaS.choixOb()" >Vous auriez du les les protéger!</button>
     </div>
-
+<!-- Christophhis -->
+<div class="choix" *ngIf="dchristophhisS.choix">
+  <button class="btnleft btnL btn" (click)="dchristophhisS.choix1et2()">Je suis venus le plus vite possible quand j'ai reçus votre message</button>
+  <button class="btnright btnN btn" (click)="dchristophhisS.choix1et2()">Oui... je suis la maintenant, comme vous l'avez demandé</button>
+</div>
+<div class="choix" *ngIf="dchristophhisS.choixb">
+  <button class="btnleft btnN btn" (click)="dchristophhisS.removeb()" (click)="cC.attack()">A vos ordre Capitaine!</button>
+  <button class="btnright btnN btn" (click)="dchristophhisS.removeb()"  (click)="cC.attack()">Bien!</button>
+</div>
+<!-- aurelia -->
+<div class="choix" *ngIf="dAureliaS.choixattack">
+  <button class="btnleft btnN btn"  (click)="dAureliaS.infoattack()">Quel est la stratégie d'attaque?</button>
+  <button class="btnright btnN btn" (click)="dAureliaS.remove()" (click)="sC.attackgo()">Non</button>
+</div>
+<!-- Tarnas -->
+<div class="choix" *ngIf="sC.choixTarnas">
+  <button class="btnleft btnN btn"  (click)="sC.helpTarnas()">[Sauver le Tarnas]</button>
+  <button class="btnright btnN btn" (click)="sC.abandonTarnas()">[Sacrifier le Tarnas]</button>
+</div>
+<!-- escape Pod -->
+<div class="choix" *ngIf="sC.choixPod">
+  <button class="btnleft btnN btn"  (click)="sC.killThem()">Affirmatif, aucun Survivant!</button>
+  <button class="btnright btnN btn" (click)="sC.escapeThem()">Négatif, laisser les fuir.</button>
+</div>

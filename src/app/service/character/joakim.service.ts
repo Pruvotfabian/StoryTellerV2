@@ -23,4 +23,15 @@ export class JoakimService {
     //   this.choixb = true;
     // }
   }
+  dialattack(){
+    if (this.introDialId == false) {
+      this.dS.name = "Joa Kim : ";
+      this.dS.test = "Commandant ! Le caporale Aurelia vous attend... Aller la voir, elle est dans le hangar. Elle vous fourniras un chasseur.";
+      // this.introDialId = true;
+    }
+    if (this.introDialId == true) {
+      this.dS.name = "Joa Kim : ";
+      this.dS.test = "Aller voir le caporale Aurelia, vite commandant !";
+    }
+  }
 }

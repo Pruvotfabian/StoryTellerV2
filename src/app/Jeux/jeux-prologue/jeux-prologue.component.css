@@ -82,6 +82,10 @@
   right: 2%;
   transition: 0.5s;
 }
+.next5.active{
+  right: 2%;
+  transition: 0.5s;
+}
 .imgcenter{
   position: absolute;
   width: 100%;
@@ -247,7 +251,24 @@
 .img11.active{
   z-index: 2;
 }
-
+.imgportecommandemant{
+  z-index: -1;
+}
+.imgportecommandemant.active{
+  z-index: 2;
+}
+.imgpostecommandemant{
+  z-index: -1;
+}
+.imgpostecommandemant.active{
+  z-index: 2;
+}
+.imgportecommandemantbis{
+  z-index: -1;
+}
+.imgportecommandemantbis.active{
+  z-index: 2;
+}
 
 
 

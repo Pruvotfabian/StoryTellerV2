@@ -1,6 +1,7 @@
 import { Injectable } from '@angular/core';
 import { HeaderService } from '../header.service';
 import * as $ from 'jquery';
+import { KarmaService } from '../karma.service';
 
 @Injectable({
   providedIn: 'root'
@@ -11,7 +12,10 @@ export class NaibafService {
   choixb: boolean = false;
   dialId : number = 0;
   introDialId: boolean = false;
-  constructor(public dS: HeaderService) { }
+  constructor(
+    public dS: HeaderService,
+    public kS: KarmaService,
+    ) { }
 
     // Nai Baf
     dial(){
@@ -37,16 +41,17 @@ export class NaibafService {
     }
     choixneutreb(){
       this.dS.name = "Nai Baf :";
-      this.dS.test = "N'oubliez pas ce que je vous est dit ! ";
+      this.dS.test = "Je ne peut pas vous en dire plus...";
       this.choixb = false;
       this.introDialId = true;
     }
-      //choix lumineux Enorc Bes
+    //choix lumineux Enorc Bes
   choixL(){
     this.dS.name = "Nai Baf : ";
     this.dS.test = "Je me présente Nai Baf pour vous servire. Je suis au courant de votre mission commandant et je sais de source quasiment fiable que le lieutenant Enorc est dans le coup ! ";
     this.choix = false;
     this.choixb = true;
+    this.kS.lumineux++;
  
 }
 choixLb(){
@@ -55,6 +60,7 @@ choixLb(){
     $('.next4').addClass('active');
     this.dialId = 0;
     this.choixb = false;
+    this.kS.lumineux += 5;
 
 }
 
@@ -64,33 +70,34 @@ choixLb(){
     this.dS.test = "Je suis désolé de vous avoir importuné commandant !";
     this.choix = false;
     this.introDialId = true;
+    this.kS.obscur++;
 }
 choixOb(){
   this.dS.name = "Nai Baf : ";
   this.dS.test = "Je ... je Compris commandant je ne vous importunerais plus !";
     this.choixb = false;
     this.introDialId = true;
+    this.kS.obscur += 5;
 }
 
 dialnext(){
   this.dialId++;
       //Dialogue Nai baf
       if (this.dialId === 1) {
-        
         this.dS.name = "Commandant Kila : ";
-        this.dS.test = "Difficile a croire vue vos propos";
+        this.dS.test = "Difficile à croire vue vos propos !";
       }
       if (this.dialId === 2) {
         this.dS.name = "Nai Baf : ";
-        this.dS.test = "Mais faites commme vous le voulez commandant je vous previens juste";
+        this.dS.test = "Faites commme vous voulez commandant, je vous previens juste";
       }
       if (this.dialId === 3) {
         this.dS.name = "Commandant Kila : ";
-        this.dS.test = "Juste arréter de le calomnier";
+        this.dS.test = "Arréter de le calomnier !";
       }
       if (this.dialId === 4) {
         this.dS.name = "Nai Baf : ";
-        this.dS.test = " Oui commandant, désolé";
+        this.dS.test = " Oui commandant !";
         $('.next4').removeClass('active');
         this.dialId = 0;
         this.introDialId = true;

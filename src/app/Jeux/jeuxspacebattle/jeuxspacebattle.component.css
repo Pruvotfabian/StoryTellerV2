@@ -1,0 +1,505 @@
+.back {
+    position: absolute;
+    background-repeat: none;
+    background-size: cover;
+    width: 100%;
+    height: 100%;
+    background-color: #000;
+    overflow: hidden;
+  }
+  .block{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .imgcenter{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+  }
+  .imgBackgroundSpace{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background-repeat: repeat;
+    background-position: 0 0;
+    background-size: auto 100%;
+    z-index: 0;
+    background-image: url('../../../assets/image/background.jpeg');
+  }
+  .imgBackgroundSpace.active{
+    z-index: 1;
+   animation: space 1000s infinite; 
+  }
+.transcenter{
+  position: absolute;
+  top: 2%;
+  left: 15%;
+  z-index: -1;
+}
+.transcenter.active{
+  z-index: 1;
+  animation: jump 2s linear;
+}
+.transleft{
+  position: absolute;
+  top: 2%;
+  right: -15%;
+  z-index: -1;
+}
+.transleft.active{
+  transform: scale(0.5);
+  z-index: 0;
+  animation: moveleft 50s linear;
+}
+.transrightsquadron{
+  position: absolute;
+  top: -12%;
+  right: -100%;
+  z-index: -1;
+}
+.transrightsquadron.active{
+  z-index: 2;
+  animation: moverightsquadron 10s;
+}
+.transrighttarnas{
+  position: absolute;
+  top: -45%;
+  right: -70%;
+  transform: scale(0.5);
+  z-index: -1;
+}
+.transrighttarnas.active{
+  z-index: 2;
+  animation: moverightsquadron 10s 6s;
+}
+@keyframes moverightsquadron {
+  0% {  right: -70%; }
+  100% { right: 100%; }
+}
+@keyframes moveleft {
+  0% {  right: -15%; }
+  100% { right: 50%; }
+}
+@keyframes jump {
+  0% {  transform: scale(0) }
+  100% { transform: scale(1) }
+}
+@keyframes space {
+    0% {   background-position: 0 0;}
+    100% { background-position: -10000px 0; }
+  }
+.imgdest1{
+  z-index: -1;
+}
+.imgdest1.active{
+  z-index: 1;
+}
+.imgdest2{
+  z-index: -1
+}
+.imgdest2.active{
+  z-index: 1;
+}
+.imgdest2bis{
+  z-index: -1;
+}
+.imgdest2bis.active{
+  z-index: 1;
+}
+.imgdest2ter{
+  z-index: -1
+}
+.imgdest2ter.active{
+  z-index: 1;
+}
+.imgsimplonis1{
+  z-index: -1;
+}
+.imgsimplonis1.active{
+  z-index: 1;
+}
+.imgsimplonis2{
+  z-index: -1;
+}
+.imgsimplonis2.active{
+  z-index: 1;
+}
+.imgsimplonispont1{
+  z-index: -1;
+}
+.imgsimplonispont1.active{
+  z-index: 1;
+}
+.imgsimplonispont2{
+  z-index: -1;
+}
+.imgsimplonispont2.active{
+  z-index: 1;
+}
+.imgsimplonispont3{
+  z-index: -1;
+}
+.imgsimplonispont3.active{
+  z-index: 1;
+}
+.imgsimplonispont4{
+  z-index: -1;
+}
+.imgsimplonispont4.active{
+  z-index: 1;
+}
+.imgsimplonisspace1{
+  z-index: -1;
+}
+.imgsimplonisspace1.active{
+  z-index: 1;
+}
+.imgsimplonisspace2{
+  z-index: -1;
+}
+.imgsimplonisspace2.active{
+  z-index: 1;
+}
+.imgcockpit{
+  z-index: -1;
+}
+.imgcockpit.active{
+  z-index: 99;
+}
+.imgcockpitleft{
+  z-index: -1;
+}
+.imgcockpitleft.active{
+  z-index: 99;
+}
+.imgtiesquadron{
+  position: absolute;
+  top: -40%;
+  transform: scale(0.1);
+  z-index: -1;
+}
+.imgtiesquadron.active{
+  transform: scale(0.4);
+  animation: tiesquadron 5s;
+  z-index: 1;
+}
+@keyframes tiesquadron {
+  0% {  transform: scale(0) }
+  100% { transform: scale(0.4) }
+}
+.imgdestroyer{
+  position: absolute;
+  z-index: -1;
+  left: 30%;
+}
+.imgdestroyer.active{
+  z-index: 1;
+  left: -100%;
+  animation: destTarnas 20s;
+}
+
+.imgtarnas{
+  width: 40%;
+  position: absolute;
+  z-index: -1;
+  left: 6%;
+}
+.imgtarnas.active{
+  z-index: 1;
+  left: -100%;
+  animation: destTarnas 15s;
+
+}
+@keyframes destTarnas {
+  0% {  left: 30% }
+  100% { left: -100% }
+}
+.imgxwingleft{
+  position: absolute;
+  z-index: -1;
+  transform: rotate(-20deg);
+  top: 10%;
+  left: 10%;
+}
+.imgxwingleft.active{
+  z-index: 1;
+  left: -100%;
+  animation: xwingleft 8s;
+}
+@keyframes xwingleft {
+  0% {  left: 10% }
+  100% { left: -100% }
+}
+.imgxwingright{
+  position: absolute;
+  z-index: -1;
+  transform: rotate(20deg);
+  top: 10%;
+  right: 10%;
+}
+.imgxwingright.active{
+  z-index: 1;
+  right: -100%;
+  animation: xwingright 10s;
+}
+@keyframes xwingright {
+  0% {  right: 10% }
+  100% { right: -100% }
+}
+.imgsimplonisPontPrepare{
+  z-index: -1;
+}
+.imgsimplonisPontPrepare.active{
+  z-index: 1;
+}
+.imgTarnashelp{
+  z-index: -1;
+}
+.imgTarnashelp.active{
+  z-index: 1;
+}
+.imgdestopenfire{
+  z-index: -1;
+}
+.imgdestopenfire.active{
+  z-index: 1;
+}
+.imgdestopenfire2{
+  z-index: -1;
+}
+.imgdestopenfire2.active{
+  z-index: 1;
+}
+.imgdestopenfire3{
+  z-index: -1;
+}
+.imgdestopenfire3.active{
+  z-index: 1;
+}
+.imgTarnasdest{
+  z-index: -1;
+}
+.imgTarnasdest.active{
+  z-index: 1;
+}
+.imgTarnasdest2{
+  z-index: -1;
+}
+.imgTarnasdest2.active{
+  z-index: 1;
+}
+.imgTarnasdest3{
+  z-index: -1;
+}
+.imgTarnasdest3.active{
+  z-index: 1;
+}
+.imgsimplonisPontParé{
+  z-index: -1;
+}
+.imgsimplonisPontParé.active{
+  z-index: 1;
+}
+.imgsimplonisPontultimefire{
+  z-index: -1;
+}
+.imgsimplonisPontultimefire.active{
+  z-index: 1;
+}
+.imgsimplonisPontultimefire2{
+  z-index: -1;
+}
+.imgsimplonisPontultimefire2.active{
+  z-index: 1;
+}
+.imgsimplonisPontultimefire3{
+  z-index: -1;
+}
+.imgsimplonisPontultimefire3.active{
+  z-index: 1;
+}
+.imgsimplonisend{
+  z-index: -1;
+}
+.imgsimplonisend.active{
+  z-index: 1;
+}
+.imgsimplonisend2{
+  z-index: -1;
+}
+.imgsimplonisend2.active{
+  z-index: 1;
+}
+.imgsimplonisend3{
+  z-index: -1;
+}
+.imgsimplonisend3.active{
+  z-index: 1;
+}
+.imgsimplonisend4{
+  z-index: -1;
+}
+.imgsimplonisend4.active{
+  z-index: 1;
+}
+.imgsimplonispod{
+  z-index: -1;
+}
+.imgsimplonispod.active{
+  z-index: 1;
+}
+.imgsimplonisevacuate{
+  z-index: -1;
+}
+.imgsimplonisevacuate.active{
+  z-index: 1;
+}
+.imgsimplonisevacuateinside{
+  z-index: -1;
+}
+.imgsimplonisevacuateinside.active{
+  z-index: 1;
+}
+.imgthechoiceTranasDest{
+  z-index: -1;
+}
+.imgthechoiceTranasDest.active{
+  z-index: 1;
+}
+.imgthechoiceTranasOK{
+  z-index: -1;
+}
+.imgthechoiceTranasOK.active{
+  z-index: 1;
+}
+.imgthechoiceSpare{
+  z-index: -1;
+}
+.imgthechoiceSpare.active{
+  z-index: 1;
+}
+.imgthechoiceRevenge{
+  z-index: -1;
+}
+.imgthechoiceRevenge.active{
+  z-index: 1;
+}
+.imgthechoiceRevenge2{
+  z-index: -1;
+}
+.imgthechoiceRevenge2.active{
+  z-index: 1;
+}
+.imgthechoiceRevenge3{
+  z-index: -1;
+}
+.imgthechoiceRevenge3.active{
+  z-index: 1;
+}
+.imgthechoiceRevenge4{
+  z-index: -1;
+}
+.imgthechoiceRevenge4.active{
+  z-index: 1;
+}
+.imgthechoiceRevenge5{
+  z-index: -1;
+}
+.imgthechoiceRevenge5.active{
+  z-index: 1;
+}
+.imgthechoiceRevenge6{
+  z-index: -1;
+}
+.imgthechoiceRevenge6.active{
+  z-index: 1;
+}
+.imgthechoiceRevenge7{
+  z-index: -1;
+}
+.imgthechoiceRevenge7.active{
+  z-index: 1;
+}
+
+
+/* Surchauffe */
+.backBattle{
+    top: 0;
+    left: 0;
+    z-index: 100;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    cursor: none;
+}
+.box{
+    position: absolute;
+    bottom: 5%;
+    left: 5%;
+    z-index: 100;
+    width: 30%;
+    height: 20px;
+    border-radius: 20px 0 20px 0;
+    color: rgb(37, 199, 211);
+    background: rgba(0, 81, 87, 0.767);
+    border: 2px solid rgb(37, 199, 211);
+    cursor: none;
+}
+.contain{
+    display: flex;
+}
+.alert{
+    width: 100%;
+    position: absolute;
+    z-index: 10;
+    color: red;
+    text-align: center;
+    font-size: 1.3em;
+    background:  rgba(255, 153, 0, 0.664);
+}
+.verylow{
+    width: 20%;
+    height: 100px;
+    background: rgba(61, 243, 61, 0.541);
+}
+.low{
+    width: 20%;
+    height: 100px;
+    background: rgba(0, 128, 0, 0.562);
+}
+.medium{
+    width: 20%;
+    height: 100px;
+    background: rgba(255, 230, 0, 0.562);
+}
+.mediumplus{
+    width: 20%;
+    height: 100px;
+    background: rgba(255, 174, 0, 0.575);
+}
+.warning{
+    width: 20%;
+    height: 100px;
+    background: rgba(255, 0, 0, 0.589);
+}
+
+#cursor{
+    z-index: 20;
+    position: absolute;
+    box-sizing: border-box;
+    transition: 0.1s;
+    transform: translate(-50%, -50%);
+    pointer-events: none;
+}
+.cursor{
+    opacity: 0;
+}
+.cursor.active{
+    opacity: 1;
+}
+

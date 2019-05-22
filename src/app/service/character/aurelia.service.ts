@@ -11,6 +11,7 @@ export class AureliaService {
   choix: boolean = false;
   choixb: boolean = false;
   choixc: boolean = false;
+  choixattack: boolean = false;
   dialId : number = 0;
   clickarea1: boolean = false;
   
@@ -32,6 +33,29 @@ export class AureliaService {
         this.dS.test = "Oui, Commandant ?";
         this.choixb = true;
       }
+    }
+    dialattack(){
+      if (this.introDialId == false) {
+        this.dS.name = "Aurelia : ";
+        this.dS.test = "Ah ! Commandant ! Prenez ce casque il reste encore un chasseur... le tarnas va vous apporter un soutien !";
+        this.introDialId = true;
+      }
+      if (this.introDialId == true) {
+        this.dS.name = "Aurelia : ";
+        this.dS.test = "Prenez le casque et monter à bord du chasseur, vite commandant !";
+      }
+    }
+    casque(){
+      this.dS.name = "Aurelia : ";
+      this.dS.test = "C'est bon vous avez votre casque ? Bien ! Des questions ?";
+      this.choixattack = true;
+    }
+    remove(){
+      this.choixattack = false;
+    }
+    infoattack(){
+      this.dS.name = "Aurelia : ";
+      this.dS.test = "Biensûr commandant ! 20-100 à élaboré une stratégie, il faut retenir le plus longtemps possible les impériaux le tant que l'arme charge... le Tarnas vous fourniras un soutien contre le destroyer stellaire. Autre chose ?";
     }
     // choix neutre Aurelia
   choix1et2(){

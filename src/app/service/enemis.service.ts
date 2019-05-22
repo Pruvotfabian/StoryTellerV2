@@ -6,6 +6,10 @@ import { HealhbarService } from './healhbar.service';
   providedIn: 'root'
 })
 export class EnemisService {
+  tiefigthers: boolean = true;
+  tiefigthers2: boolean = true;
+  tiefigthers3: boolean = true;
+  tiefigthers4: boolean = true;
   stormtroopers: boolean = true;
   stormtroopers2: boolean = true;
   stormtroopers3: boolean = true;
@@ -18,6 +22,10 @@ export class EnemisService {
   enemis: string = "";
   combat: boolean = false;
 
+  idtiefighter: number = 2;
+  idtiefighter2: number = 2;
+  idtiefighter3: number = 2;
+  idtiefighter4: number = 2;
   id: number = 2;
   id2: number = 2;
   id3: number = 2;
@@ -29,7 +37,78 @@ export class EnemisService {
   id9: number = 100;
   
   constructor(public sD: SurchauffeService,public hS: HealhbarService) { }
-
+  TieFighter(){
+    if (this.sD.verifyshoot == 1) {
+      this.enemis = "Chasseur Tie";
+      this.id--;
+      this.combat = true;
+      this.sD.shooting();
+      this.sD.shootf();
+      this.hS.heal();
+      console.log(this.id)
+      if (this.id === 0) {
+        this.hS.death();
+        this.enemis = "";
+        this.combat = false;
+        this.tiefigthers = false;
+        this.id = 2;
+      }
+    }
+    }
+    TieFighter2(){
+      if (this.sD.verifyshoot == 1) {
+        this.enemis = "Chasseur Tie";
+        this.id--;
+        this.combat = true;
+        this.sD.shooting();
+        this.sD.shootf();
+        this.hS.heal();
+        console.log(this.id)
+        if (this.id === 0) {
+          this.hS.death();
+          this.enemis = "";
+          this.combat = false;
+          this.tiefigthers2 = false;
+          this.id = 2;
+        }
+      }
+      }
+      TieFighter3(){
+        if (this.sD.verifyshoot == 1) {
+          this.enemis = "Chasseur Tie";
+          this.id--;
+          this.combat = true;
+          this.sD.shooting();
+          this.sD.shootf();
+          this.hS.heal();
+          console.log(this.id)
+          if (this.id === 0) {
+            this.hS.death();
+            this.enemis = "";
+            this.combat = false;
+            this.tiefigthers3 = false;
+            this.id = 2;
+          }
+        }
+        }
+        TieFighter4(){
+          if (this.sD.verifyshoot == 1) {
+            this.enemis = "Chasseur Tie";
+            this.id--;
+            this.combat = true;
+            this.sD.shooting();
+            this.sD.shootf();
+            this.hS.heal();
+            console.log(this.id)
+            if (this.id === 0) {
+              this.hS.death();
+              this.enemis = "";
+              this.combat = false;
+              this.tiefigthers4 = false;
+              this.id = 2;
+            }
+          }
+          }
   stormtrooper(){
   if (this.sD.verifyshoot == 1) {
     this.enemis = "StormTrooper";

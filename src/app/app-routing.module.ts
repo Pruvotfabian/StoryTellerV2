@@ -6,14 +6,21 @@ import { JeuxPrologueComponent } from './Jeux/jeux-prologue/jeux-prologue.compon
 import { JeuxEpilogueComponent } from './Jeux/jeux-epilogue/jeux-epilogue.component';
 import { GameguardianService } from './service/gameguardian.service';
 import { GeneriqueComponent } from './Jeux/generique/generique.component';
-import { SurchauffeComponent } from './surchauffe/surchauffe.component';
+// import { TestComponent } from './test/test.component';
+import { JeuxspacebattleComponent } from './Jeux/jeuxspacebattle/jeuxspacebattle.component';
+import { JeuxAssaultComponent } from './Jeux/jeux-assault/jeux-assault.component';
+import { JeuxFinalBattleComponent } from './Jeux/jeux-final-battle/jeux-final-battle.component';
+import { TheGameComponent } from './Jeux/the-game/the-game.component';
 
 const routes: Routes = [
   { path: '',  redirectTo: 'home', pathMatch: 'full' },
+  { path: 'la-chute-du-simplonis', component: TheGameComponent },
   { path: 'home', component: AccueilComponent},
-  { path: 'la-chute-du-simplonis', component: JeuxPrologueComponent},
+  { path: 'test', component: JeuxPrologueComponent},
+  { path: 'testspace', component: JeuxspacebattleComponent},
+  { path: 'testassault', component: JeuxAssaultComponent},
+  { path: 'testfinal', component: JeuxFinalBattleComponent},
   { path: 'generique', component: GeneriqueComponent},
-  { path: 'choix', component: SurchauffeComponent },
   { path: 'epilogue', component: JeuxEpilogueComponent, canActivate: [GameguardianService]},
   { path: '**', component: Page404Component},
 ];

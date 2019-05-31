@@ -58,10 +58,10 @@ export class AccueilComponent implements OnInit {
       },16000)
       setTimeout(() => {
         this.chargement2 = false;
-      },19000)
+      },24000)
       setTimeout(() => {
         this.chargement3 = true;
-      },19000)
+      },24000)
   }
 
 }
